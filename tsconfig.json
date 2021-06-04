@@ -10,11 +10,12 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
-    "lib": ["ES2019"],
+    "lib": ["ES2019", "DOM"],
     "target": "ES2019",
     "composite": true,
     "noEmit": false,
     "jsx": "react",
+    "baseUrl": ".",
     "paths": {
       "src/*": ["./src/*"],
       "#/*": ["./tests/*"]
