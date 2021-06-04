@@ -1,11 +1,14 @@
 import React from 'react';
 import { Button as Button$1, Card as Card$1, TextField as TextField$1 } from '@naturacosmeticos/natds-rn';
 import { StyleSheet, View } from 'react-native';
-export { Text, View } from 'react-native';
+export { View } from 'react-native';
+import styled from 'styled-components/native';
 
 const Button = ({ onPress, text, testID }) => {
     return (React.createElement(Button$1, { text: text, onPress: onPress, testID: testID, accessibilityLabel: testID }));
 };
+
+const Text = styled.Text ``;
 
 const Card = ({ children }) => {
     return React.createElement(Card$1, null, children);
@@ -21,4 +24,4 @@ const style = StyleSheet.create({
 });
 const HorizontalSpace = () => (React.createElement(View, { style: style.view }));
 
-export { Button, Card, HorizontalSpace, TextField };
+export { Button, Card, HorizontalSpace, Text, TextField };
