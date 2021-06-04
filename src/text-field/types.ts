@@ -1,5 +1,7 @@
+import React from "react";
+
 export interface TextFieldProps {
-  onChangeText: () => void;
+  onChangeText: (event?: React.ChangeEvent<HTMLInputElement> | string) => void;
   value: string;
   type: "text" | "password";
   label: string;
