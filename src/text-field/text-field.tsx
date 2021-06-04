@@ -14,9 +14,14 @@ export const TextField = (props: TextFieldProps): React.ReactElement => {
     testID
   } = props;
 
+  const handleChangeText = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    const {value} = e.target;
+    onChangeText(value)
+  }
+
   return (
     <NatTextField
-      onChange={onChangeText}
+      onChange={handleChangeText}
       value={value}
       type={type}
       label={label}
