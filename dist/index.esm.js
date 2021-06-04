@@ -23,7 +23,11 @@ const Card = ({ children }) => {
 
 const TextField = (props) => {
     const { onChangeText, value, type, label, helpText, placeholder, testID } = props;
-    return (React.createElement(TextField$1, { onChange: onChangeText, value: value, type: type, label: label, helpText: helpText, placeholder: placeholder, "data-testid": testID }));
+    const handleChangeText = (e) => {
+        const { value } = e.target;
+        onChangeText(value);
+    };
+    return (React.createElement(TextField$1, { onChange: handleChangeText, value: value, type: type, label: label, helpText: helpText, placeholder: placeholder, "data-testid": testID }));
 };
 
 const style = { height: 15 };

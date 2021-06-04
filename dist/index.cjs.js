@@ -32,7 +32,11 @@ const Card = ({ children }) => {
 
 const TextField = (props) => {
     const { onChangeText, value, type, label, helpText, placeholder, testID } = props;
-    return (React__default['default'].createElement(natdsWeb.TextField, { onChange: onChangeText, value: value, type: type, label: label, helpText: helpText, placeholder: placeholder, "data-testid": testID }));
+    const handleChangeText = (e) => {
+        const { value } = e.target;
+        onChangeText(value);
+    };
+    return (React__default['default'].createElement(natdsWeb.TextField, { onChange: handleChangeText, value: value, type: type, label: label, helpText: helpText, placeholder: placeholder, "data-testid": testID }));
 };
 
 const style = { height: 15 };
