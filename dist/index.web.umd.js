@@ -22,7 +22,10 @@
       return (React__default['default'].createElement(StyledView, { className: className, "data-testid": testID }, children));
   };
 
-  const Text = ({ children }) => React__default['default'].createElement("span", null, children);
+  const Text = (props) => {
+      const { children, testID } = props;
+      return React__default['default'].createElement("span", { "data-testid": testID }, children);
+  };
 
   const Card = ({ children }) => {
       return React__default['default'].createElement(natdsWeb.Card, null, children);

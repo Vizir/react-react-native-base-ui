@@ -15,7 +15,10 @@ const View = ({ className, children, testID }) => {
     return (React.createElement(StyledView, { className: className, "data-testid": testID }, children));
 };
 
-const Text = ({ children }) => React.createElement("span", null, children);
+const Text = (props) => {
+    const { children, testID } = props;
+    return React.createElement("span", { "data-testid": testID }, children);
+};
 
 const Card = ({ children }) => {
     return React.createElement(Card$1, null, children);
