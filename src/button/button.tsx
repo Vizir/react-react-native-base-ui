@@ -1,9 +1,9 @@
 import React from "react";
 import { Button as NatButton } from "@naturacosmeticos/natds-web";
 
-import { Props } from "./types";
+import { IButtonProps } from "./types";
 
-export const Button = (props: Props): React.ReactElement => {
+export const Button = (props: IButtonProps): React.ReactElement => {
   const { onPress, text, testID } = props;
 
   return (

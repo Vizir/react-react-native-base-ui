@@ -1,11 +1,8 @@
 import React from "react";
 
-interface Props {
-  children: React.ReactNode;
-  testID?: string;
-}
+import { ITextProps } from "./types";
 
-export const Text: React.FC<Props> = (props: Props): React.ReactElement => {
+export const Text = (props: ITextProps): React.ReactElement => {
   const { children, testID } = props;
   return <span data-testid={testID}>{children}</span>;
 };

@@ -1,4 +1,4 @@
-export interface Props {
+export interface IButtonProps {
   text: string;
   onPress: () => void;
   testID?: string;
