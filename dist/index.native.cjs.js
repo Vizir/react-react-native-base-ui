@@ -4,8 +4,8 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var React = require('react');
 var natdsRn = require('@naturacosmeticos/natds-rn');
-var reactNative = require('react-native');
 var styled = require('styled-components/native');
+var reactNative = require('react-native');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -16,7 +16,17 @@ const Button = ({ onPress, text, testID }) => {
     return (React__default['default'].createElement(natdsRn.Button, { text: text, onPress: onPress, testID: testID, accessibilityLabel: testID }));
 };
 
-const Text = styled__default['default'].Text ``;
+const ViewStyled = styled__default['default'].View ``;
+const View = (props) => {
+    const { testID, children } = props;
+    return React__default['default'].createElement(ViewStyled, { accessibilityLabel: testID }, children);
+};
+
+const TextStyled = styled__default['default'].Text ``;
+const Text = (props) => {
+    const { children, testID } = props;
+    return React__default['default'].createElement(TextStyled, { accessibilityLabel: testID }, children);
+};
 
 const Card = ({ children }) => {
     return React__default['default'].createElement(natdsRn.Card, null, children);
@@ -32,14 +42,9 @@ const style = reactNative.StyleSheet.create({
 });
 const HorizontalSpace = () => (React__default['default'].createElement(reactNative.View, { style: style.view }));
 
-Object.defineProperty(exports, 'View', {
-  enumerable: true,
-  get: function () {
-    return reactNative.View;
-  }
-});
 exports.Button = Button;
 exports.Card = Card;
 exports.HorizontalSpace = HorizontalSpace;
 exports.Text = Text;
 exports.TextField = TextField;
+exports.View = View;
