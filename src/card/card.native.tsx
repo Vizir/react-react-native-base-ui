@@ -1,8 +1,8 @@
 import React from "react";
 import { Card as NatCard } from "@naturacosmeticos/natds-rn";
 
-import { Props } from "./types";
+import { ICardProps } from "./types";
 
-export const Card = ({ children }: Props): React.ReactElement => {
+export const Card = ({ children }: ICardProps): React.ReactElement => {
   return <NatCard>{children}</NatCard>;
 };

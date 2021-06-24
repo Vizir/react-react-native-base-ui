@@ -1,8 +1,8 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@naturacosmeticos/natds-rn'), require('react-native'), require('styled-components/native')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'react', '@naturacosmeticos/natds-rn', 'react-native', 'styled-components/native'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.BaseUI = {}, global.React, global.natdsRn, global.reactNative, global.styled));
-}(this, (function (exports, React, natdsRn, reactNative, styled) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@naturacosmeticos/natds-rn'), require('styled-components/native'), require('react-native')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'react', '@naturacosmeticos/natds-rn', 'styled-components/native', 'react-native'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.BaseUI = {}, global.React, global.natdsRn, global.styled, global.reactNative));
+}(this, (function (exports, React, natdsRn, styled, reactNative) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -13,7 +13,17 @@
       return (React__default['default'].createElement(natdsRn.Button, { text: text, onPress: onPress, testID: testID, accessibilityLabel: testID }));
   };
 
-  const Text = styled__default['default'].Text ``;
+  const ViewStyled = styled__default['default'].View ``;
+  const View = (props) => {
+      const { testID, children } = props;
+      return React__default['default'].createElement(ViewStyled, { accessibilityLabel: testID }, children);
+  };
+
+  const TextStyled = styled__default['default'].Text ``;
+  const Text = (props) => {
+      const { children, testID } = props;
+      return React__default['default'].createElement(TextStyled, { accessibilityLabel: testID }, children);
+  };
 
   const Card = ({ children }) => {
       return React__default['default'].createElement(natdsRn.Card, null, children);
@@ -29,17 +39,12 @@
   });
   const HorizontalSpace = () => (React__default['default'].createElement(reactNative.View, { style: style.view }));
 
-  Object.defineProperty(exports, 'View', {
-    enumerable: true,
-    get: function () {
-      return reactNative.View;
-    }
-  });
   exports.Button = Button;
   exports.Card = Card;
   exports.HorizontalSpace = HorizontalSpace;
   exports.Text = Text;
   exports.TextField = TextField;
+  exports.View = View;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 

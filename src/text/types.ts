@@ -1,5 +1,6 @@
 import React from "react";
 
-export interface ICardProps {
+export interface ITextProps {
   children: React.ReactNode;
+  testID?: string;
 }
