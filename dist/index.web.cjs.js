@@ -45,9 +45,14 @@ const TextField = (props) => {
 const style = { height: 15 };
 const HorizontalSpace = () => React__default['default'].createElement("div", { style: style });
 
+const ProgressIndicator = () => {
+    return React__default['default'].createElement(natdsWeb.ProgressIndicator, { size: 32 });
+};
+
 exports.Button = Button;
 exports.Card = Card;
 exports.HorizontalSpace = HorizontalSpace;
+exports.ProgressIndicator = ProgressIndicator;
 exports.Text = Text;
 exports.TextField = TextField;
 exports.View = View;

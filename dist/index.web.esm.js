@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button as Button$1, Card as Card$1, TextField as TextField$1 } from '@naturacosmeticos/natds-web';
+import { Button as Button$1, Card as Card$1, TextField as TextField$1, ProgressIndicator as ProgressIndicator$1 } from '@naturacosmeticos/natds-web';
 import styled from 'styled-components';
 
 const Button = (props) => {
@@ -36,4 +36,8 @@ const TextField = (props) => {
 const style = { height: 15 };
 const HorizontalSpace = () => React.createElement("div", { style: style });
 
-export { Button, Card, HorizontalSpace, Text, TextField, View };
+const ProgressIndicator = () => {
+    return React.createElement(ProgressIndicator$1, { size: 32 });
+};
+
+export { Button, Card, HorizontalSpace, ProgressIndicator, Text, TextField, View };

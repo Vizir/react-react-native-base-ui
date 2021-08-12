@@ -42,9 +42,14 @@ const style = reactNative.StyleSheet.create({
 });
 const HorizontalSpace = () => (React__default['default'].createElement(reactNative.View, { style: style.view }));
 
+const ProgressIndicator = () => {
+    return React__default['default'].createElement(natdsRn.ProgressIndicator, { size: "medium" });
+};
+
 exports.Button = Button;
 exports.Card = Card;
 exports.HorizontalSpace = HorizontalSpace;
+exports.ProgressIndicator = ProgressIndicator;
 exports.Text = Text;
 exports.TextField = TextField;
 exports.View = View;
