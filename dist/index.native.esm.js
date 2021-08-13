@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button as Button$1, Card as Card$1, TextField as TextField$1 } from '@naturacosmeticos/natds-rn';
+import { Button as Button$1, Card as Card$1, TextField as TextField$1, ProgressIndicator as ProgressIndicator$1 } from '@naturacosmeticos/natds-rn';
 import styled from 'styled-components/native';
 import { StyleSheet, View as View$1 } from 'react-native';
 
@@ -33,4 +33,8 @@ const style = StyleSheet.create({
 });
 const HorizontalSpace = () => (React.createElement(View$1, { style: style.view }));
 
-export { Button, Card, HorizontalSpace, Text, TextField, View };
+const ProgressIndicator = () => {
+    return React.createElement(ProgressIndicator$1, { size: "medium" });
+};
+
+export { Button, Card, HorizontalSpace, ProgressIndicator, Text, TextField, View };
