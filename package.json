@@ -30,6 +30,7 @@
     "@types/styled-components-react-native": "^5.1.1",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
+    "babel-jest": "^27.3.1",
     "concurrently": "^6.0.2",
     "eslint": "^7.27.0",
     "eslint-config-prettier": "^8.3.0",
@@ -43,7 +44,9 @@
     "faker": "^5.5.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
+    "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-native": "0.64.1",
     "react-test-renderer": "^17.0.2",
     "rollup": "^2.50.5",
     "rollup-plugin-commonjs": "^10.1.0",
@@ -56,12 +59,15 @@
   "dependencies": {
     "@naturacosmeticos/natds-styles": "^1.5.4",
     "@naturacosmeticos/natds-web": "^1.5.6",
+    "@naturacosmeticos/natds-rn": "^5.1.0",
+
     "styled-components": "^5.2.3"
   },
   "peerDependencies": {
-    "react": "17.0.1",
-    "react-native": "0.64.1",
     "@naturacosmeticos/natds-styles": "^1.5.4",
-    "@naturacosmeticos/natds-web": "^1.5.6"
+    "@naturacosmeticos/natds-web": "^1.5.6",
+    "@naturacosmeticos/natds-rn": "^5.1.0",
+    "react": "17.0.1",
+    "react-native": "0.64.1"
   }
 }
