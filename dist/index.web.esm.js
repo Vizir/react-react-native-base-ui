@@ -3,8 +3,8 @@ import { Button as Button$1, Card as Card$1, TextField as TextField$1, ProgressI
 import styled from 'styled-components';
 
 const Button = (props) => {
-    const { onPress, text, testID } = props;
-    return (React.createElement(Button$1, { color: "primary", variant: "contained", "data-testid": testID, onClick: onPress }, text));
+    const { onPress, text, testID, variant = "contained", size = "medium", startIcon, endIcon, } = props;
+    return (React.createElement(Button$1, { color: "primary", variant: variant, "data-testid": testID, onClick: onPress, size: size, startIcon: startIcon, endIcon: endIcon }, text));
 };
 
 const StyledView = styled.div `
@@ -20,8 +20,8 @@ const Text = (props) => {
     return React.createElement("span", { "data-testid": testID }, children);
 };
 
-const Card = ({ children }) => {
-    return React.createElement(Card$1, null, children);
+const Card = ({ children, testID }) => {
+    return React.createElement(Card$1, { "data-testid": testID }, children);
 };
 
 const TextField = (props) => {
