@@ -12,8 +12,8 @@ var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 var styled__default = /*#__PURE__*/_interopDefaultLegacy(styled);
 
 const Button = (props) => {
-    const { onPress, text, testID } = props;
-    return (React__default['default'].createElement(natdsWeb.Button, { color: "primary", variant: "contained", "data-testid": testID, onClick: onPress }, text));
+    const { onPress, text, testID, variant = "contained", size = "medium", startIcon, endIcon, } = props;
+    return (React__default['default'].createElement(natdsWeb.Button, { color: "primary", variant: variant, "data-testid": testID, onClick: onPress, size: size, startIcon: startIcon, endIcon: endIcon }, text));
 };
 
 const StyledView = styled__default['default'].div `
@@ -29,8 +29,8 @@ const Text = (props) => {
     return React__default['default'].createElement("span", { "data-testid": testID }, children);
 };
 
-const Card = ({ children }) => {
-    return React__default['default'].createElement(natdsWeb.Card, null, children);
+const Card = ({ children, testID }) => {
+    return React__default['default'].createElement(natdsWeb.Card, { "data-testid": testID }, children);
 };
 
 const TextField = (props) => {

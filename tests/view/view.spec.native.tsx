@@ -11,8 +11,8 @@ describe("View Native", () => {
     const text = faker.random.word();
 
     const { getByA11yLabel } = render(
-      <View testID="view" accessibilityLabel="view">
-        <Text accessibilityLabel={text}>{text}</Text>
+      <View testID="view">
+        <Text testID={text}>{text}</Text>
       </View>
     );
 

@@ -10,7 +10,7 @@ const noop = (): null => null;
 describe("Button native", (): void => {
   test("renders text prop correctly.", (): void => {
     const { getByA11yLabel } = render(
-      <Button onPress={noop} text="teste" testID="teste" />
+      <Button onPress={noop} text="teste" testID="teste" variant="text" />
     );
     const button = getByA11yLabel(/teste/i);
 
@@ -22,7 +22,7 @@ describe("Button native", (): void => {
     const onPress = jest.fn();
 
     const { getByTestId } = render(
-      <Button onPress={onPress} text={text} testID="button" />
+      <Button onPress={onPress} text={text} testID="button" variant="text" />
     );
 
     fireEvent.press(getByTestId("button"));
