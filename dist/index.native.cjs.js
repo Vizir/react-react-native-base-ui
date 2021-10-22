@@ -12,8 +12,8 @@ function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'defau
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 var styled__default = /*#__PURE__*/_interopDefaultLegacy(styled);
 
-const Button = ({ onPress, text, testID }) => {
-    return (React__default['default'].createElement(natdsRn.Button, { text: text, onPress: onPress, testID: testID, accessibilityLabel: testID }));
+const Button = ({ onPress, text, testID, variant = "contained", mobileSize = "semiX", }) => {
+    return (React__default['default'].createElement(natdsRn.Button, { text: text, onPress: onPress, testID: testID, accessibilityLabel: testID, type: variant, size: mobileSize }));
 };
 
 const ViewStyled = styled__default['default'].View ``;
@@ -28,8 +28,8 @@ const Text = (props) => {
     return React__default['default'].createElement(TextStyled, { accessibilityLabel: testID }, children);
 };
 
-const Card = ({ children }) => {
-    return React__default['default'].createElement(natdsRn.Card, null, children);
+const Card = ({ children, testID }) => {
+    return React__default['default'].createElement(natdsRn.Card, { testID: testID }, children);
 };
 
 const TextField = (props) => {

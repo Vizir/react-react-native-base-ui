@@ -9,8 +9,6 @@ export const Button = ({
   testID,
   variant="contained",
   mobileSize="semiX",
-  iconPosition=undefined,
-  iconName=undefined,
 }: IButtonProps): React.ReactElement => {
   return (
     <NatButton
@@ -20,8 +18,6 @@ export const Button = ({
       accessibilityLabel={testID}
       type={variant}
       size={mobileSize}
-      iconPosition={iconPosition}
-      iconName={iconName}
     />
   );
 };
