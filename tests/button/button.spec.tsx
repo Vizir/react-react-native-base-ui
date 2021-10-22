@@ -11,7 +11,7 @@ describe("Button Web", () => {
   test("renders text prop correctly.", () => {
     const text = faker.random.word();
 
-    render(<Button onPress={noop} text={text} />);
+    render(<Button onPress={noop} text={text} variant="text" />);
 
     const button = screen.getByText(new RegExp(text, "i"));
 
@@ -22,7 +22,7 @@ describe("Button Web", () => {
     const text = faker.random.word();
     const onPress = jest.fn();
 
-    render(<Button onPress={onPress} text={text} />);
+    render(<Button onPress={onPress} text={text} variant="text" />);
 
     fireEvent.click(screen.getByText(text));
 
