@@ -24,8 +24,6 @@ export const TextField = (props: TextFieldProps): React.ReactElement => {
       placeholder={placeholder}
       testID={testID}
       accessibilityLabel={testID}
-      accessibilityComponentType={testID}
-      accessibilityTraits={testID}
     />
   );
 };
