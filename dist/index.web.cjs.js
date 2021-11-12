@@ -39,7 +39,7 @@ const ErrorWrapper = (props) => {
             React__default['default'].createElement(natdsWeb.Typography, { variant: "h4", color: "textPrimary" }, title)),
         description && (React__default['default'].createElement(natdsWeb.Typography, { variant: "subtitle1", color: "textSecondary" }, description)),
         textButton && (React__default['default'].createElement(LinkButton, null,
-            React__default['default'].createElement(natdsWeb.Button, { color: "primary", variant: "outlined", onClick: actionButton, size: "large" }, textButton)))));
+            React__default['default'].createElement(natdsWeb.Button, { color: "primary", variant: "text", onClick: actionButton, size: "large" }, textButton)))));
 };
 
 const StyledView = styled__default['default'].div `
