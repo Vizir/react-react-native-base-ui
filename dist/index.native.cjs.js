@@ -34,7 +34,7 @@ const Card = ({ children, testID }) => {
 
 const TextField = (props) => {
     const { onChangeText, value, type, label, helpText, placeholder, testID } = props;
-    return (React__default['default'].createElement(natdsRn.TextField, { onChangeText: onChangeText, value: value, type: type, label: label, helperText: helpText, placeholder: placeholder, testID: testID, accessibilityLabel: testID, accessibilityComponentType: testID, accessibilityTraits: testID }));
+    return (React__default['default'].createElement(natdsRn.TextField, { onChangeText: onChangeText, value: value, type: type, label: label, helperText: helpText, placeholder: placeholder, testID: testID, accessibilityLabel: testID }));
 };
 
 const style = reactNative.StyleSheet.create({

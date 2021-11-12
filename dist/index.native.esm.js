@@ -25,7 +25,7 @@ const Card = ({ children, testID }) => {
 
 const TextField = (props) => {
     const { onChangeText, value, type, label, helpText, placeholder, testID } = props;
-    return (React.createElement(TextField$1, { onChangeText: onChangeText, value: value, type: type, label: label, helperText: helpText, placeholder: placeholder, testID: testID, accessibilityLabel: testID, accessibilityComponentType: testID, accessibilityTraits: testID }));
+    return (React.createElement(TextField$1, { onChangeText: onChangeText, value: value, type: type, label: label, helperText: helpText, placeholder: placeholder, testID: testID, accessibilityLabel: testID }));
 };
 
 const style = StyleSheet.create({
