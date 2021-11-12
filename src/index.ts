@@ -1,4 +1,5 @@
 export * from "./button/button";
+export * from "./errorWrapper/error-wrapper";
 export * from "./view/view";
 export * from "./text/text";
 export * from "./card/card";
