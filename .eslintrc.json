@@ -29,8 +29,9 @@
     "@typescript-eslint/explicit-function-return-type": "error",
     "@typescript-eslint/no-explicit-any": "error",
     "no-template-curly-in-string": ["error"],
-    "nonblock-statement-body-position": ["error"],
-    "import/no-default-export": ["error"],
+    "nonblock-statement-body-position": [
+      "error"
+    ],
 
     // Code style
     "padding-line-between-statements": [
