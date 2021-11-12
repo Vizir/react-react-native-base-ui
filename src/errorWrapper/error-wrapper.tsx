@@ -41,7 +41,7 @@ export const ErrorWrapper = (props: IErrorWrapperProps): React.ReactElement => {
             onClick={actionButton}
             size="large"
           >
-            {textButton}
+            <strong>{textButton}</strong>
           </NatButton>
         </LinkButton>
       )}

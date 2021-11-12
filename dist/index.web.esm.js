@@ -30,7 +30,8 @@ const ErrorWrapper = (props) => {
             React.createElement(Typography, { variant: "h4", color: "textPrimary" }, title)),
         description && (React.createElement(Typography, { variant: "subtitle1", color: "textSecondary" }, description)),
         textButton && (React.createElement(LinkButton, null,
-            React.createElement(Button$1, { color: "primary", variant: "text", onClick: actionButton, size: "large" }, textButton)))));
+            React.createElement(Button$1, { color: "primary", variant: "text", onClick: actionButton, size: "large" },
+                React.createElement("strong", null, textButton))))));
 };
 
 const StyledView = styled.div `
