@@ -24,12 +24,12 @@ export const ErrorWrapper = (props: IErrorWrapperProps): React.ReactElement => {
         </svg>
       )}
       <Title>
-        <Typography variant="h4" color="textPrimary">
+        <Typography variant="h4" color="textPrimary" align="center">
           {title}
         </Typography>
       </Title>
       {description && (
-        <Typography variant="subtitle1" color="textSecondary">
+        <Typography variant="subtitle1" color="textSecondary" align="center">
           {description}
         </Typography>
       )}
