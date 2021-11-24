@@ -17,7 +17,6 @@ ToggleChecked.args = {
   iconOn: <Icon name="filled-action-check" size="huge" />,
   color: 'secondary',
   size: 'medium',
-  checked: true,
 }
 
 export const ToggleUnchecked = Template.bind({});
@@ -25,8 +24,7 @@ ToggleUnchecked.args = {
   iconOff: <Icon name="outlined-action-check" size="huge" />,
   iconOn: <Icon name="filled-action-check" size="huge" />,
   color: 'secondary',
-  size: 'semiX',
-  edge: 'start'
+  size: 'medium',
 }
 
 export const ToggleComponent = (): React.ReactElement => (

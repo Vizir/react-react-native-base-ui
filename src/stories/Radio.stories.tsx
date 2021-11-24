@@ -12,9 +12,7 @@ const Template: ComponentStory<typeof Radio> = (args) => <Radio {...args} /> ;
 
 export const RadioDisable = Template.bind({});
 RadioDisable.args = {
-  disabled: true,
-  checked: false,
-  color: 'default',
+  color: 'secondary',
 }
 
 export const RadioColor = Template.bind({});

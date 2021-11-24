@@ -1,10 +1,13 @@
 import React from 'react';
-import { TabContainer as NatTabContainer, ITabContainerProps } from '@naturacosmeticos/natds-web';
+import { TabContainer as NatTabContainer } from '@naturacosmeticos/natds-web';
 
-export const TabContainer = ({ children, ...rest}: ITabContainerProps): React.ReactElement => {
+import { ITabContainerProps } from './types';
+
+export const TabContainer = ({ children, value = false, variant}: ITabContainerProps): React.ReactElement => {
   return (
     <NatTabContainer
-      {...rest}
+      value={value}
+      variant={variant}
     >
       {children}
     </NatTabContainer>

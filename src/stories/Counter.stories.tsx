@@ -12,12 +12,10 @@ const Template: ComponentStory<typeof Counter> = (args) => <Counter {...args} />
 
 export const CounterComponent = Template.bind({});
 CounterComponent.args = {
-  size: 'medium',
-  initialValue: 0,
+  value: 0,
 }
 
 export const CounterLabel = Template.bind({});
 CounterLabel.args = {
-  label: 'Amount',
-  size: 'small',
+  size: 'small'
 }

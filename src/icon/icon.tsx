@@ -3,8 +3,8 @@ import { Icon as NatIcon } from '@naturacosmeticos/natds-web';
 
 import { IIconProps } from './types';
 
-export const Icon = ({name}: IIconProps): React.ReactElement => {
+export const Icon = ({name, ...rest}: IIconProps): React.ReactElement => {
   return (
-    <NatIcon name={name} />
+    <NatIcon name={name} {...rest} />
   )
 }

@@ -2,5 +2,5 @@ import { DividerTypes } from "@naturacosmeticos/natds-rn/build/lib/components/Di
 
 export interface IDividerProps {
   variant?: 'fullWidth' | 'inset' | 'middle';
-  types?: DividerTypes;
+  type?: DividerTypes;
 }
