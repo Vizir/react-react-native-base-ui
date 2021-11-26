@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ErrorWrapper } from '../errorWrapper/error-wrapper';
 
 export default {
-  title: "Example/ErrorWrapper",
+  title: "Components/ErrorWrapper",
   component: ErrorWrapper,
   argTypes: {
     backgroundColor: { control: "color" },
