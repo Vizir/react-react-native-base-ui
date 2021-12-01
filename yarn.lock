@@ -2484,10 +2484,10 @@
   dependencies:
     open-color "^1.8.0"
 
-"@naturacosmeticos/natds-web@^4.5.1":
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/@naturacosmeticos/natds-web/-/natds-web-4.5.1.tgz#a0d162779a0ad7bce65a929f2dfbd007970cfd4e"
-  integrity sha512-ZCxrQ/09/6Vut4iG78JSXvJksAFydWzyZ/Qqb2S3iNCuonauIZrzFnNbpcq+JpA07SeV0I9AUHal6fHrJ15hzA==
+"@naturacosmeticos/natds-web@^4.5.2":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@naturacosmeticos/natds-web/-/natds-web-4.5.2.tgz#2026b4ccc3b1ddf247136a54b21a5ea8f22d53e9"
+  integrity sha512-sV1Ils774GQ34FgwrXHdXZwK7VPSZ14Nuya/PKCfcZ41Mzy+Qh+Zq8To8k2iMfGpLRwjdWtmi9MbIDwxKd8yrQ==
   dependencies:
     "@material-ui/core" "4.12.3"
     "@material-ui/icons" "4.11.2"
