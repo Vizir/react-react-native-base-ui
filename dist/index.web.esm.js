@@ -12,13 +12,13 @@ const ContainerWrapper = styled.div `
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 90vh;
+  height: 100%;
 `;
 const Title = styled.div `
   margin: 30px 0 15px;
 `;
 const LinkButton = styled.div `
-  margin-top: 150px;
+  margin-top: 50px;
 `;
 
 const ErrorWrapper = (props) => {
@@ -43,8 +43,8 @@ const View = ({ className, children, testID }) => {
 };
 
 const Text = (props) => {
-    const { children, testID } = props;
-    return React.createElement(Typography, { "data-testid": testID }, children);
+    const { children, testID, color, align, variant, classes, component, display, noWrap, gutterBottom, paragraph, variantMapping } = props;
+    return (React.createElement(Typography, { "data-testid": testID, color: color, align: align, variant: variant, classes: classes, component: component, display: display, noWrap: noWrap, gutterBottom: gutterBottom, paragraph: paragraph, variantMapping: variantMapping }, children));
 };
 
 const Card = ({ children, testID }) => {
