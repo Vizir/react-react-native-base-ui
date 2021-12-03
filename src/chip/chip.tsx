@@ -1,9 +1,24 @@
-import React from 'react';
-import { Chip as NatChip } from '@naturacosmeticos/natds-web';
+import React from "react";
+import { Chip as NatChip } from "@naturacosmeticos/natds-web";
 
-import { IChipProps } from './types';
+import { IChipProps } from "./types";
 
-export const Chip = ({clickable, size, label, color, variant}: IChipProps):React.ReactElement => {
+export const Chip = (props: IChipProps): React.ReactElement => {
+  const {
+    clickable,
+    size,
+    label,
+    color,
+    variant,
+    disabled,
+    classes,
+    component,
+    icon,
+    avatar,
+    deleteIcon,
+    onDelete,
+  } = props;
+
   return (
     <NatChip
       clickable={clickable}
@@ -11,6 +26,13 @@ export const Chip = ({clickable, size, label, color, variant}: IChipProps):React
       label={label}
       color={color}
       variant={variant}
+      disabled={disabled}
+      classes={classes}
+      component={component}
+      icon={icon}
+      avatar={avatar}
+      onDelete={onDelete}
+      deleteIcon={deleteIcon}
     />
-  )
-}
+  );
+};
