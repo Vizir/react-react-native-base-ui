@@ -14,8 +14,9 @@
     "test": "concurrently \"yarn test:web\" \"yarn test:native\"",
     "test:web": "jest",
     "test:native": "jest --config ./jest.native.config.js",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "BROWSER=none start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "clean": "rm -rf node_modules && rm -rf src/*/node_modules"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
