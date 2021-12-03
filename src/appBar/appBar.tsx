@@ -1,12 +1,14 @@
 import React from 'react';
-import { AppBar as NatAppBar, IAppBarProps } from '@naturacosmeticos/natds-web';
+import { AppBar as NatAppBar } from '@naturacosmeticos/natds-web';
 
-export const AppBar = ({children, position, color, ...rest}:IAppBarProps): React.ReactElement => {
+import { IAppBarProps } from './types';
+
+export const AppBar = ({children, position, color, classes }:IAppBarProps): React.ReactElement => {
   return (
     <NatAppBar
       position={position}
       color={color}
-      {...rest}
+      classes={classes}
     >
       {children}
     </NatAppBar>
