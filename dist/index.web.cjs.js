@@ -21,13 +21,13 @@ const ContainerWrapper = styled__default['default'].div `
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 90vh;
+  height: 100%;
 `;
 const Title = styled__default['default'].div `
   margin: 30px 0 15px;
 `;
 const LinkButton = styled__default['default'].div `
-  margin-top: 150px;
+  margin-top: 50px;
 `;
 
 const ErrorWrapper = (props) => {
@@ -52,8 +52,8 @@ const View = ({ className, children, testID }) => {
 };
 
 const Text = (props) => {
-    const { children, testID } = props;
-    return React__default['default'].createElement(natdsWeb.Typography, { "data-testid": testID }, children);
+    const { children, testID, color, align, variant, classes, component, display, noWrap, gutterBottom, paragraph, variantMapping } = props;
+    return (React__default['default'].createElement(natdsWeb.Typography, { "data-testid": testID, color: color, align: align, variant: variant, classes: classes, component: component, display: display, noWrap: noWrap, gutterBottom: gutterBottom, paragraph: paragraph, variantMapping: variantMapping }, children));
 };
 
 const Card = ({ children, testID }) => {

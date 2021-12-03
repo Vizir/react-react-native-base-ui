@@ -1,8 +1,4 @@
-import { Sizes } from "@naturacosmeticos/natds-web/dist/Components/Counter/Counter.props";
-export interface ICounterProps {
-  value?: number;
-  onChange: (newValue: number) => void;
-  onIncrement: (newValue: number) => void;
-  onDecrement: (newValue: number) => void;
-  size?: Sizes;
-}
+
+import { ICounterProps as INatChipProps } from "@naturacosmeticos/natds-web";
+
+export type ICounterProps = INatChipProps;

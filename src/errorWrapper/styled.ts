@@ -5,7 +5,7 @@ export const ContainerWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 90vh;
+  height: 100%;
 `;
 
 export const Title = styled.div`
@@ -13,5 +13,5 @@ export const Title = styled.div`
 `;
 
 export const LinkButton = styled.div`
-  margin-top: 150px;
+  margin-top: 50px;
 `;
