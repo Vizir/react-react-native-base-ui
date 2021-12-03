@@ -26,7 +26,7 @@
   "rules": {
     // Bug avoiding
     "import/no-cycle": "error",
-    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/explicit-function-return-type": "warn",
     "@typescript-eslint/no-explicit-any": "error",
     "no-template-curly-in-string": ["error"],
     "nonblock-statement-body-position": [
