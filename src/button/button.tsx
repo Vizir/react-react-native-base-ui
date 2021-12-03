@@ -1,29 +1,19 @@
 import React, { ReactElement } from "react";
 import { Button as NatButton } from "@naturacosmeticos/natds-web";
 
-import { IButtonProps } from "./types";
+import { IWebButtonProps } from "./types";
 
-export const Button = (props: IButtonProps): ReactElement => {
+export const Button = (props: IWebButtonProps): ReactElement => {
   const {
-    onPress,
+    color = "primary",
+    variant = "contained",
+    size = "medium",
     text,
-    testID,
-    variant="contained",
-    size="medium",
-    startIcon,
-    endIcon,
+    ...rest
   } = props;
 
   return (
-    <NatButton
-      color="primary"
-      variant={variant}
-      data-testid={testID}
-      onClick={onPress}
-      size={size}
-      startIcon={startIcon}
-      endIcon={endIcon}
-    >
+    <NatButton color={color} variant={variant} size={size} {...rest}>
       {text}
     </NatButton>
   );
