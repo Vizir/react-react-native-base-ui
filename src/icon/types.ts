@@ -1,9 +1,6 @@
-import { IconName } from '@naturacosmeticos/natds-icons';
-import { IconColor, IconSize } from "@naturacosmeticos/natds-web/dist/Components/Icon";
-import { Theme } from '@naturacosmeticos/natds-themes/react-native';
+import { IIconProps as WebIconProps } from "@naturacosmeticos/natds-web/dist/Components/Icon/Icon.props";
 export interface IIconProps {
-  name: IconName;
-  size?: IconSize;
-  color?: IconColor;
-  theme?: Theme;
+  testID?: string;
 }
+
+export interface IWebIconProps extends WebIconProps, IIconProps {}
