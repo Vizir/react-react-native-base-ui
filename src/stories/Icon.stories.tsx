@@ -5,6 +5,45 @@ import { Icon } from '../icon/icon'
 
 export default {
   title: 'Components/Icon',
+  argTypes: {
+    name: {
+      description: 'The Icon name',
+      table: {
+        type: { summary: 'IconName', },
+        defaultValue: { summary: '"filled-default-mockup"' },
+      },
+      control: {
+        type: 'select'
+      },
+    },
+    color: {
+      options: ['default', 'error', 'inherit', 'primary', 'secondary'],
+      table: {
+        type: { summary: '"default", "error", "inherit", "primary", "secondary"' },
+      },
+      control: {
+        type: 'radio'
+      },
+    },
+    size: {
+      description: 'The Icon size. It is standard by default.',
+        options: ['micro', 'tiny', 'small', 'standard', 'medium', 'large', 'largeX', 'largeXX', 'huge', 'hugeX', 'hugeXX', 'largeX', 'largeXX', 'hugeX', 'hugeXX'],
+        table: {
+          type: { summary: '"micro" "tiny" "small" "standard" "medium" "large" "largeX" "largeXX" "huge" "hugeX" "hugeXX" "largeX" "largeXX" "hugeX" "hugeXX"' },
+          defaultValue: { summary: '"standard' },
+        },
+        control: {
+          type: 'select',
+        }
+    },
+    classes: {
+      description: 'Override or extend the styles applied to the component.\
+      See CSS API for more details.',
+        table: {
+          type: { summary: 'object' }
+        }
+    }
+  },
   component: Icon,
 } as ComponentMeta<typeof Icon>;
 
@@ -30,19 +69,3 @@ IconHuge.args = {
   color: 'error',
   size: 'huge'
 };
-
-export const IconComponent = (): React.ReactElement => (
-  <div>
-    <Icon name="filled-default-mockup" size="micro" />
-    <Icon name="filled-default-mockup" size="tiny" />
-    <Icon name="filled-default-mockup" size="small" />
-    <Icon name="filled-default-mockup" size="standard" />
-    <Icon name="filled-default-mockup" size="medium" />
-    <Icon name="filled-default-mockup" size="large" />
-    <Icon name="filled-default-mockup" size="largeX" />
-    <Icon name="filled-default-mockup" size="largeXX" />
-    <Icon name="filled-default-mockup" size="huge" />
-    <Icon name="filled-default-mockup" size="hugeX" />
-    <Icon name="filled-default-mockup" size="hugeXX" />
-  </div>
-)
