@@ -5,7 +5,7 @@ import { AvatarColor, AvatarVariant } from '@naturacosmeticos/natds-web/dist/Com
 export interface IAvatarProps {
   testID?: string;
   size?: AvatarSizes;
-  type: AvatarTypes;
+  type?: AvatarTypes;
   imgSource?: string;
   alt?: string;
   children?: React.ReactElement;
