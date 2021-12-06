@@ -1,8 +1,3 @@
-import { LinkProps } from '@material-ui/core/Link';
+import { ILinkProps as ILinkNatProps } from "@naturacosmeticos/natds-web";
 
-export interface ILinkProps {
-  children: LinkProps['children'];
-  color?: 'default' | 'error' | 'inherit' | 'initial' | 'primary' | 'secondary' | 'textPrimary' | 'textSecondary';
-  variant?: LinkProps['variant'];
-  underline?: LinkProps['underline'];
-}
+export type ILinkProps = ILinkNatProps;

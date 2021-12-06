@@ -1,9 +1,7 @@
-import React from 'react';
-import { PropTypes } from '@material-ui/core';
+import { IIconButtonProps as WebIconButtonProps } from "@naturacosmeticos/natds-web";
 
 export interface IIconButtonProps {
-  children: React.ReactNode;
-  color?: PropTypes.Color;
-  edge?: 'start' | 'end' | false;
-  size?: 'small' | 'medium';
+  testID?: string;
 }
+
+export interface IWebIconButtonProps extends WebIconButtonProps, IIconButtonProps {}
