@@ -29,4 +29,7 @@ export * from "./skeleton/skeleton";
 export * from "./tabContainer/tabContainer";
 export * from "./tabItem/tabItem";
 export * from "./toggleButton/toggleButton";
+export * from "./toolbar/toolbar";
+export * from "./appBarHighlight/appBarHighlight";
+export * from "./container/container";
 export * from "./provider/provider";
