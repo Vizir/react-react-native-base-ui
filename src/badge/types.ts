@@ -1,5 +1,5 @@
-import { IBadgeProps as BadgeProps } from "@naturacosmeticos/natds-web/dist/Components/Badge/Badge.props";
+import { IBadgeProps as BadgeProps } from "@naturacosmeticos/natds-web";
 
 export interface IBadgeProps extends BadgeProps {
-  testID: string;
+  testID?: string;
 }
