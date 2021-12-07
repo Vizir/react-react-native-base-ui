@@ -39,4 +39,5 @@ export * from "./expansionPanel/expansionPanel";
 export * from "./list/list";
 export * from "./listSubheader/listSubheader";
 export * from "./cssBaseline/cssBaseline";
-export * from "./themes/themes"
+export * from "./themes/themes";
+export * from "./input/input";
