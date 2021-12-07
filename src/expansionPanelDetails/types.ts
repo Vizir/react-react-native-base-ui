@@ -1,3 +1,3 @@
-import { IExpansionPanelDetailsProps as IExpansionPanelDetailsPropsProps } from "@naturacosmeticos/natds-web";
+import { IExpansionPanelDetailsProps as INatExpansionPanelDetailsProps } from "@naturacosmeticos/natds-web";
 
-export type IExpansionPanelDetailsProps = IExpansionPanelDetailsPropsProps;
+export type IExpansionPanelDetailsProps = INatExpansionPanelDetailsProps;
