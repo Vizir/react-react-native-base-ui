@@ -29,3 +29,4 @@ export * from "./skeleton/skeleton";
 export * from "./tabContainer/tabContainer";
 export * from "./tabItem/tabItem";
 export * from "./toggleButton/toggleButton";
+export * from "./provider/provider";
