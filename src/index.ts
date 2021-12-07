@@ -36,3 +36,6 @@ export * from "./provider/provider";
 export * from "./expansionPanelSummary/expansionPanelSummary";
 export * from "./expansionPanelDetails/expansionPanelDetails";
 export * from "./expansionPanel/expansionPanel";
+export * from "./list/list";
+export * from "./listSubheader/listSubheader";
+
