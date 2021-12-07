@@ -34,3 +34,4 @@ export * from "./appBarHighlight/appBarHighlight";
 export * from "./container/container";
 export * from "./expansionPanelSummary/expansionPanelSummary";
 export * from "./expansionPanelDetails/expansionPanelDetails";
+export * from "./expansionPanel/expansionPanel";

@@ -7,6 +7,7 @@ export const ExpansionPanelDetails = (
   props: IExpansionPanelDetailsProps
 ): React.ReactElement => {
   const { children, classes } = props;
+
   return (
     <NatExpansionPanelDetails classes={classes}>
       {children}

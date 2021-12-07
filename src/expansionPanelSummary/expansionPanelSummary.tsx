@@ -18,10 +18,11 @@ export const ExpansionPanelSummary = (
     disableTouchRipple,
     focusRipple,
     focusVisibleClassName,
-    onFocusVisible,
     TouchRippleProps,
     IconButtonProps,
+    onFocusVisible,
   } = props;
+
   return (
     <NatExpansionPanelSummary
       expandIcon={expandIcon}

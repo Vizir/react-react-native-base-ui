@@ -31,6 +31,6 @@ const Template: ComponentStory<typeof ExpansionPanelDetails> = (args) => (
 
 export const Playground = Template.bind({});
 Playground.args = {
-  children: "  Expansion panel details content",
+  children: "Expansion panel details content",
   classes: undefined,
 };
