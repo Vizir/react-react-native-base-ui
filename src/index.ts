@@ -33,3 +33,6 @@ export * from "./toolbar/toolbar";
 export * from "./appBarHighlight/appBarHighlight";
 export * from "./container/container";
 export * from "./provider/provider";
+export * from "./expansionPanelSummary/expansionPanelSummary";
+export * from "./expansionPanelDetails/expansionPanelDetails";
+export * from "./expansionPanel/expansionPanel";
