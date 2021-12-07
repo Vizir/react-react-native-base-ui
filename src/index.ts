@@ -32,3 +32,6 @@ export * from "./toggleButton/toggleButton";
 export * from "./toolbar/toolbar";
 export * from "./appBarHighlight/appBarHighlight";
 export * from "./container/container";
+export * from "./expansionPanelSummary/expansionPanelSummary";
+export * from "./expansionPanelDetails/expansionPanelDetails";
+export * from "./expansionPanel/expansionPanel";
