@@ -3,8 +3,8 @@ import { Button as Button$1, Card as Card$1, TextField as TextField$1, ProgressI
 import styled from 'styled-components/native';
 import { StyleSheet, View as View$1 } from 'react-native';
 
-const Button = ({ onPress, text, testID, variant = "contained", mobileSize = "semiX", }) => {
-    return (React.createElement(Button$1, { text: text, onPress: onPress, testID: testID, accessibilityLabel: testID, type: variant, size: mobileSize }));
+const Button = ({ onPress, text, testID, type = "contained", size = "semiX", }) => {
+    return (React.createElement(Button$1, { text: text, onPress: onPress, testID: testID, accessibilityLabel: testID, type: type, size: size }));
 };
 
 const ViewStyled = styled.View ``;
