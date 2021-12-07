@@ -9,8 +9,8 @@
   var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
   var styled__default = /*#__PURE__*/_interopDefaultLegacy(styled);
 
-  const Button = ({ onPress, text, testID, variant = "contained", mobileSize = "semiX", }) => {
-      return (React__default['default'].createElement(natdsRn.Button, { text: text, onPress: onPress, testID: testID, accessibilityLabel: testID, type: variant, size: mobileSize }));
+  const Button = ({ onPress, text, testID, type = "contained", size = "semiX", }) => {
+      return (React__default['default'].createElement(natdsRn.Button, { text: text, onPress: onPress, testID: testID, accessibilityLabel: testID, type: type, size: size }));
   };
 
   const ViewStyled = styled__default['default'].View ``;
