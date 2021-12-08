@@ -3,9 +3,10 @@ import { ExpansionPanelSummary as NatExpansionPanelSummary } from "@naturacosmet
 
 import { IExpansionPanelSummaryProps } from "./types";
 
-export const ExpansionPanelSummary = (
-  props: IExpansionPanelSummaryProps
-): React.ReactElement => {
+export const ExpansionPanelSummary = React.forwardRef<
+  HTMLDivElement,
+  IExpansionPanelSummaryProps
+>((props: IExpansionPanelSummaryProps, ref) => {
   const {
     children,
     expandIcon,
@@ -21,6 +22,7 @@ export const ExpansionPanelSummary = (
     TouchRippleProps,
     IconButtonProps,
     onFocusVisible,
+    ...rest
   } = props;
 
   return (
@@ -38,8 +40,12 @@ export const ExpansionPanelSummary = (
       onFocusVisible={onFocusVisible}
       TouchRippleProps={TouchRippleProps}
       IconButtonProps={IconButtonProps}
+      ref={ref}
+      {...rest}
     >
       {children}
     </NatExpansionPanelSummary>
   );
-};
+});
+
+ExpansionPanelSummary.displayName = "ExpansionPanelSummary";

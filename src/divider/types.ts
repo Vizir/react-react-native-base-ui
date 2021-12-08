@@ -1,6 +1,3 @@
-import { DividerTypes } from "@naturacosmeticos/natds-rn/build/lib/components/Divider/Divider";
+import { IDividerProps as INatDividerProps } from "@naturacosmeticos/natds-web";
 
-export interface IDividerProps {
-  variant?: 'fullWidth' | 'inset' | 'middle';
-  type?: DividerTypes;
-}
+export type IDividerProps = INatDividerProps;
