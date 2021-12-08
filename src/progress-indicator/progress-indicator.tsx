@@ -3,8 +3,13 @@ import { ProgressIndicator as NatProgressIndicator } from "@naturacosmeticos/nat
 
 import { IWebProgressIndicatorProps } from "./types";
 
-export const ProgressIndicator = (
-  props: IWebProgressIndicatorProps
-): React.ReactElement => {
-  return <NatProgressIndicator size={32} {...props} />;
-};
+export const ProgressIndicator = React.forwardRef<
+  HTMLButtonElement,
+  IWebProgressIndicatorProps
+>((props: IWebProgressIndicatorProps) => {
+  const { size = 32, ...rest } = props;
+
+  return <NatProgressIndicator size={size} {...rest} />;
+});
+
+ProgressIndicator.displayName = "ProgressIndicator";

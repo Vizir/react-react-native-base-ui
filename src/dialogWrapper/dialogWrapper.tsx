@@ -7,10 +7,10 @@ import {
   DialogActions,
 } from "@naturacosmeticos/natds-web";
 
-import { IDialogProps } from "./types";
+import { IDialogWrapperProps } from "./types";
 import { CloseButton } from "./styled";
 
-export const DialogWrapper = (props: IDialogProps): React.ReactElement => {
+export const DialogWrapper = (props: IDialogWrapperProps): React.ReactElement => {
   const {
     openButtonText,
     title,
@@ -35,6 +35,7 @@ export const DialogWrapper = (props: IDialogProps): React.ReactElement => {
     onExiting,
     maxWidth = "sm",
     open = false,
+    ...rest
   } = props;
 
   const [isDialogOpen, setIsDialogOpen] = useState(open);
@@ -65,6 +66,7 @@ export const DialogWrapper = (props: IDialogProps): React.ReactElement => {
         onExit={onExit}
         onExited={onExited}
         onExiting={onExiting}
+        {...rest}
       >
         <DialogTitle disableTypography={disableTypography} classes={classes}>
           {title}
