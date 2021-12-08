@@ -1,18 +1,10 @@
-import React, {ImgHTMLAttributes} from 'react';
-import { AvatarSizes, AvatarTypes } from "@naturacosmeticos/natds-rn/build/lib/components/Avatar/Avatar";
-import { AvatarColor, AvatarVariant } from '@naturacosmeticos/natds-web/dist/Components/Avatar/Avatar.props';
+import { IAvatarProps } from "@naturacosmeticos/natds-web";
+import { AvatarProps } from "@naturacosmeticos/natds-rn/build/lib/components/Avatar/Avatar";
 
-export interface IAvatarProps {
+export interface IRNAvatarProps extends AvatarProps {
   testID?: string;
-  size?: AvatarSizes;
-  type?: AvatarTypes;
-  imgSource?: string;
-  alt?: string;
-  children?: React.ReactElement;
-  color?: AvatarColor;
-  src?: string;
-  variant?: AvatarVariant;
-  srcSet?: string;
-  imgProps?: ImgHTMLAttributes<HTMLImageElement>;
-  sizes?: string;
+}
+
+export interface IWebAvatarProps extends IAvatarProps {
+  testID?: string;
 }
