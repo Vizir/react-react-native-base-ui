@@ -9,9 +9,77 @@
   var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
   var styled__default = /*#__PURE__*/_interopDefaultLegacy(styled);
 
+  const AppBar = ({ children, position, color, classes }) => {
+      return (React__default['default'].createElement(natdsWeb.AppBar, { position: position, color: color, classes: classes }, children));
+  };
+
+  const AppBarHighlight = (props) => {
+      const { children, className, component } = props;
+      return (React__default['default'].createElement(natdsWeb.AppBarHighlight, { className: className, component: component }, children));
+  };
+
+  const Avatar = (props) => {
+      const { testID, size, variant, alt, imgProps, color, children, src, srcSet, sizes } = props;
+      return (React__default['default'].createElement(natdsWeb.Avatar, { color: color, "data-testid": testID, size: size, variant: variant, alt: alt, imgProps: imgProps, src: src, srcSet: srcSet, sizes: sizes }, children));
+  };
+
+  const Badge = (props) => {
+      const { children, anchorOrigin, badgeContent, color, invisible, max, overlap, showZero, variant, testID } = props;
+      return (React__default['default'].createElement(natdsWeb.Badge, { anchorOrigin: anchorOrigin, badgeContent: badgeContent, color: color, invisible: invisible, max: max, overlap: overlap, showZero: showZero, variant: variant, "data-testid": testID }, children));
+  };
+
   const Button = (props) => {
       const { color = "primary", variant = "contained", size = "medium", text, ...rest } = props;
       return (React__default['default'].createElement(natdsWeb.Button, { color: color, variant: variant, size: size, ...rest }, text));
+  };
+
+  const Card = (props) => {
+      const { children, testID, elevation, square } = props;
+      return React__default['default'].createElement(natdsWeb.Card, { "data-testId": testID, elevation: elevation, square: square }, children);
+  };
+
+  const Checkbox = (props) => {
+      const { checked, color, disabled, indeterminate, action, disableFocusRipple, edge, centerRipple, disableTouchRipple, focusRipple, focusVisibleClassName, onFocusVisible, TouchRippleProps, checkedIcon, classes, disableRipple, icon, id, indeterminateIcon, inputProps, inputRef, onChange, required, value, } = props;
+      return (React__default['default'].createElement(natdsWeb.Checkbox, { checked: checked, color: color, disabled: disabled, indeterminate: indeterminate, action: action, disableFocusRipple: disableFocusRipple, edge: edge, centerRipple: centerRipple, disableTouchRipple: disableTouchRipple, focusRipple: focusRipple, focusVisibleClassName: focusVisibleClassName, onFocusVisible: onFocusVisible, TouchRippleProps: TouchRippleProps, checkedIcon: checkedIcon, classes: classes, disableRipple: disableRipple, icon: icon, id: id, indeterminateIcon: indeterminateIcon, inputProps: inputProps, inputRef: inputRef, onChange: onChange, required: required, value: value }));
+  };
+
+  const Chip = (props) => {
+      const { clickable, size, label, color, variant, disabled, classes, component, icon, avatar, deleteIcon, onDelete, } = props;
+      return (React__default['default'].createElement(natdsWeb.Chip, { clickable: clickable, size: size, label: label, color: color, variant: variant, disabled: disabled, classes: classes, component: component, icon: icon, avatar: avatar, onDelete: onDelete, deleteIcon: deleteIcon }));
+  };
+
+  const Container = (props) => {
+      const { children, className, component, fixed, disableGutters, maxWidth, } = props;
+      return (React__default['default'].createElement(natdsWeb.Container, { className: className, component: component, fixed: fixed, disableGutters: disableGutters, maxWidth: maxWidth }, children));
+  };
+
+  const Counter = (props) => {
+      const { onChange, onDecrement, onIncrement, value, label, readOnly, size, maxValue, minValue, } = props;
+      return (React__default['default'].createElement(natdsWeb.Counter, { value: value, label: label, readOnly: readOnly, size: size, maxValue: maxValue, minValue: minValue, onChange: onChange, onDecrement: onDecrement, onIncrement: onIncrement }));
+  };
+
+  const CssBaseline = (props) => {
+      const { children, classes, testID } = props;
+      return (React__default['default'].createElement(natdsWeb.CssBaseline, { classes: classes, "data-testid": testID }, children));
+  };
+
+  const CloseButton = styled__default['default'](natdsWeb.Button) ``;
+
+  const DialogWrapper = (props) => {
+      const { openButtonText, title, closeButtonText, fullWidth, disableBackdropClick, scroll, fullScreen, disableTypography, classes, disableSpacing, actionContent, dialogContent, onBackdropClick, onClose, onEnter, onEntered, onEntering, onEscapeKeyDown, onExit, onExited, onExiting, maxWidth = "sm", open = false, } = props;
+      const [isDialogOpen, setIsDialogOpen] = React.useState(open);
+      return (React__default['default'].createElement("div", null,
+          React__default['default'].createElement(natdsWeb.Button, { color: "primary", onClick: () => setIsDialogOpen(true), size: "medium", variant: "outlined" }, openButtonText),
+          React__default['default'].createElement(natdsWeb.Dialog, { fullWidth: fullWidth, maxWidth: maxWidth, disableBackdropClick: disableBackdropClick, open: isDialogOpen, scroll: scroll, fullScreen: fullScreen, onBackdropClick: onBackdropClick, onClose: onClose, onEnter: onEnter, onEntered: onEntered, onEntering: onEntering, onEscapeKeyDown: onEscapeKeyDown, onExit: onExit, onExited: onExited, onExiting: onExiting },
+              React__default['default'].createElement(natdsWeb.DialogTitle, { disableTypography: disableTypography, classes: classes }, title),
+              React__default['default'].createElement(natdsWeb.DialogContent, null, dialogContent && dialogContent),
+              React__default['default'].createElement(natdsWeb.DialogActions, { disableSpacing: disableSpacing },
+                  actionContent && actionContent,
+                  closeButtonText ? (React__default['default'].createElement(CloseButton, { color: "primary", onClick: () => setIsDialogOpen(false), variant: "text" }, closeButtonText)) : ("")))));
+  };
+
+  const Divider = ({ variant }) => {
+      return React__default['default'].createElement(natdsWeb.Divider, { variant: variant });
   };
 
   const ContainerWrapper = styled__default['default'].div `
@@ -41,88 +109,23 @@
                   React__default['default'].createElement("strong", null, textButton))))));
   };
 
-  const StyledView = styled__default['default'].div `
-  display: flex;
-  flex-direction: column;
-`;
-  const View = ({ className, children, testID }) => {
-      return (React__default['default'].createElement(StyledView, { className: className, "data-testid": testID }, children));
+  const ExpansionPanel = (props) => {
+      const { children, classes, onChange, TransitionComponent, TransitionProps, disabled, expanded, defaultExpanded, } = props;
+      return (React__default['default'].createElement(natdsWeb.ExpansionPanel, { classes: classes, onChange: onChange, TransitionComponent: TransitionComponent, TransitionProps: TransitionProps, disabled: disabled, expanded: expanded, defaultExpanded: defaultExpanded }, children));
   };
 
-  const Text = (props) => {
-      const { children, testID, color, align, variant, classes, component, display, noWrap, gutterBottom, paragraph, variantMapping } = props;
-      return (React__default['default'].createElement(natdsWeb.Typography, { "data-testid": testID, color: color, align: align, variant: variant, classes: classes, component: component, display: display, noWrap: noWrap, gutterBottom: gutterBottom, paragraph: paragraph, variantMapping: variantMapping }, children));
+  const ExpansionPanelDetails = (props) => {
+      const { children, classes } = props;
+      return (React__default['default'].createElement(natdsWeb.ExpansionPanelDetails, { classes: classes }, children));
   };
 
-  const Card = (props) => {
-      const { children, testID, elevation, square } = props;
-      return React__default['default'].createElement(natdsWeb.Card, { "data-testId": testID, elevation: elevation, square: square }, children);
-  };
-
-  const TextField = (props) => {
-      const { onChangeText, value, type, label, helpText, placeholder, testID } = props;
-      const handleChangeText = (e) => {
-          const { value } = e.target;
-          onChangeText(value);
-      };
-      return (React__default['default'].createElement(natdsWeb.TextField, { onChange: handleChangeText, value: value, type: type, label: label, helpText: helpText, placeholder: placeholder, "data-testid": testID }));
+  const ExpansionPanelSummary = (props) => {
+      const { children, expandIcon, classes, tabIndex, action, disabled, centerRipple, disableRipple, disableTouchRipple, focusRipple, focusVisibleClassName, TouchRippleProps, IconButtonProps, onFocusVisible, } = props;
+      return (React__default['default'].createElement(natdsWeb.ExpansionPanelSummary, { expandIcon: expandIcon, classes: classes, tabIndex: tabIndex, action: action, disabled: disabled, centerRipple: centerRipple, disableRipple: disableRipple, disableTouchRipple: disableTouchRipple, focusRipple: focusRipple, focusVisibleClassName: focusVisibleClassName, onFocusVisible: onFocusVisible, TouchRippleProps: TouchRippleProps, IconButtonProps: IconButtonProps }, children));
   };
 
   const style = { height: 15 };
   const HorizontalSpace = () => React__default['default'].createElement("div", { style: style });
-
-  const ProgressIndicator = (props) => {
-      return React__default['default'].createElement(natdsWeb.ProgressIndicator, { size: 32, ...props });
-  };
-
-  const CloseButton = styled__default['default'](natdsWeb.Button) ``;
-
-  const DialogWrapper = (props) => {
-      const { openButtonText, title, closeButtonText, fullWidth, disableBackdropClick, scroll, fullScreen, disableTypography, classes, disableSpacing, actionContent, dialogContent, onBackdropClick, onClose, onEnter, onEntered, onEntering, onEscapeKeyDown, onExit, onExited, onExiting, maxWidth = "sm", open = false, } = props;
-      const [isDialogOpen, setIsDialogOpen] = React.useState(open);
-      return (React__default['default'].createElement("div", null,
-          React__default['default'].createElement(natdsWeb.Button, { color: "primary", onClick: () => setIsDialogOpen(true), size: "medium", variant: "outlined" }, openButtonText),
-          React__default['default'].createElement(natdsWeb.Dialog, { fullWidth: fullWidth, maxWidth: maxWidth, disableBackdropClick: disableBackdropClick, open: isDialogOpen, scroll: scroll, fullScreen: fullScreen, onBackdropClick: onBackdropClick, onClose: onClose, onEnter: onEnter, onEntered: onEntered, onEntering: onEntering, onEscapeKeyDown: onEscapeKeyDown, onExit: onExit, onExited: onExited, onExiting: onExiting },
-              React__default['default'].createElement(natdsWeb.DialogTitle, { disableTypography: disableTypography, classes: classes }, title),
-              React__default['default'].createElement(natdsWeb.DialogContent, null, dialogContent && dialogContent),
-              React__default['default'].createElement(natdsWeb.DialogActions, { disableSpacing: disableSpacing },
-                  actionContent && actionContent,
-                  closeButtonText ? (React__default['default'].createElement(CloseButton, { color: "primary", onClick: () => setIsDialogOpen(false), variant: "text" }, closeButtonText)) : ("")))));
-  };
-
-  const Logo = (props) => {
-      const { color, model, size, arialabel } = props;
-      return (React__default['default'].createElement(natdsWeb.Logo, { color: color, model: model, size: size, arialabel: arialabel }));
-  };
-
-  const AppBar = ({ children, position, color, classes }) => {
-      return (React__default['default'].createElement(natdsWeb.AppBar, { position: position, color: color, classes: classes }, children));
-  };
-
-  const Avatar = (props) => {
-      const { testID, size, variant, alt, imgProps, color, children, src, srcSet, sizes } = props;
-      return (React__default['default'].createElement(natdsWeb.Avatar, { color: color, "data-testid": testID, size: size, variant: variant, alt: alt, imgProps: imgProps, src: src, srcSet: srcSet, sizes: sizes }, children));
-  };
-
-  const Badge = (props) => {
-      const { children, anchorOrigin, badgeContent, color, invisible, max, overlap, showZero, variant, testID } = props;
-      return (React__default['default'].createElement(natdsWeb.Badge, { anchorOrigin: anchorOrigin, badgeContent: badgeContent, color: color, invisible: invisible, max: max, overlap: overlap, showZero: showZero, variant: variant, "data-testid": testID }, children));
-  };
-
-  const Checkbox = (props) => {
-      const { checked, color, disabled, indeterminate, action, disableFocusRipple, edge, centerRipple, disableTouchRipple, focusRipple, focusVisibleClassName, onFocusVisible, TouchRippleProps, checkedIcon, classes, disableRipple, icon, id, indeterminateIcon, inputProps, inputRef, onChange, required, value, } = props;
-      return (React__default['default'].createElement(natdsWeb.Checkbox, { checked: checked, color: color, disabled: disabled, indeterminate: indeterminate, action: action, disableFocusRipple: disableFocusRipple, edge: edge, centerRipple: centerRipple, disableTouchRipple: disableTouchRipple, focusRipple: focusRipple, focusVisibleClassName: focusVisibleClassName, onFocusVisible: onFocusVisible, TouchRippleProps: TouchRippleProps, checkedIcon: checkedIcon, classes: classes, disableRipple: disableRipple, icon: icon, id: id, indeterminateIcon: indeterminateIcon, inputProps: inputProps, inputRef: inputRef, onChange: onChange, required: required, value: value }));
-  };
-
-  const Chip = (props) => {
-      const { clickable, size, label, color, variant, disabled, classes, component, icon, avatar, deleteIcon, onDelete, } = props;
-      return (React__default['default'].createElement(natdsWeb.Chip, { clickable: clickable, size: size, label: label, color: color, variant: variant, disabled: disabled, classes: classes, component: component, icon: icon, avatar: avatar, onDelete: onDelete, deleteIcon: deleteIcon }));
-  };
-
-  const Counter = (props) => {
-      const { onChange, onDecrement, onIncrement, value, label, readOnly, size, maxValue, minValue, } = props;
-      return (React__default['default'].createElement(natdsWeb.Counter, { value: value, label: label, readOnly: readOnly, size: size, maxValue: maxValue, minValue: minValue, onChange: onChange, onDecrement: onDecrement, onIncrement: onIncrement }));
-  };
 
   const Icon = ({ name, color, size }) => {
       return (React__default['default'].createElement(natdsWeb.Icon, { name: name, color: color, size: size }));
@@ -136,9 +139,19 @@
       return (React__default['default'].createElement(natdsWeb.Image, { alt: alt, src: src, fallback: fallback, className: className, disableSelection: disableSelection, height: height, maxHeight: maxHeight, maxWidth: maxWidth, radius: radius, state: state, style: style }));
   };
 
+  const Input = (props) => {
+      const { color, className, mask, margin, disabled, multiline, state, size, inputComponent, hasIcon, testID, value, onClick, onKeyPress, } = props;
+      return (React__default['default'].createElement(natdsWeb.Input, { color: color, className: className, mask: mask, margin: margin, disabled: disabled, multiline: multiline, state: state, size: size, inputComponent: inputComponent, hasIcon: hasIcon, "data-testid": testID, onClick: onClick, onKeyPress: onKeyPress, value: value }));
+  };
+
   const Link = (props) => {
       const { children, color, href, underline, variant, component, classes, display, noWrap, gutterBottom, paragraph, align, variantMapping, TypographyClasses, onClick, onKeyPress, } = props;
       return (React__default['default'].createElement(natdsWeb.Link, { color: color, href: href, underline: underline, variant: variant, component: component, classes: classes, display: display, noWrap: noWrap, gutterBottom: gutterBottom, paragraph: paragraph, align: align, variantMapping: variantMapping, TypographyClasses: TypographyClasses, onClick: onClick, onKeyPress: onKeyPress }, children));
+  };
+
+  const List = (props) => {
+      const { className, dense, disablePadding, subheader, children } = props;
+      return (React__default['default'].createElement(natdsWeb.List, { className: className, dense: dense, disablePadding: disablePadding, subheader: subheader }, children));
   };
 
   const ListItem = (props) => {
@@ -165,6 +178,30 @@
       return (React__default['default'].createElement(natdsWeb.ListItemText, { primary: primary, secondary: secondary, "data-testID": testID, ...rest }, children));
   };
 
+  const ListSubheader = (props) => {
+      const { children, component, classes, color, disableGutters, disableSticky, inset } = props;
+      return (React__default['default'].createElement(natdsWeb.ListSubheader, { component: component, classes: classes, color: color, disableGutters: disableGutters, disableSticky: disableSticky, inset: inset }, children));
+  };
+
+  const Logo = (props) => {
+      const { color, model, size, arialabel } = props;
+      return (React__default['default'].createElement(natdsWeb.Logo, { color: color, model: model, size: size, arialabel: arialabel }));
+  };
+
+  const Popover = (props) => {
+      const { children, placement, id, maxWidth, open, component, container, direction, anchorEl, disablePortal, keepMounted, popperOptions, popperRef, transition, actionLink, } = props;
+      return (React__default['default'].createElement(natdsWeb.Popover, { placement: placement, id: id, maxWidth: maxWidth, open: open, component: component, container: container, direction: direction, anchorEl: anchorEl, disablePortal: disablePortal, keepMounted: keepMounted, popperOptions: popperOptions, transition: transition, popperRef: popperRef, actionLink: actionLink }, children));
+  };
+
+  const ProgressIndicator = (props) => {
+      return React__default['default'].createElement(natdsWeb.ProgressIndicator, { size: 32, ...props });
+  };
+
+  const Provider = (props) => {
+      const { children, theme, testID, cssPrefix } = props;
+      return (React__default['default'].createElement(natdsWeb.Provider, { "data-testID": testID, theme: theme, cssPrefix: cssPrefix }, children));
+  };
+
   const Radio = ({ ...props }) => {
       return (React__default['default'].createElement(natdsWeb.Radio, { ...props }));
   };
@@ -186,6 +223,22 @@
       return (React__default['default'].createElement(TabItem$1.TabItem, { id: id, ...rest }, children));
   };
 
+  const Text = (props) => {
+      const { children, testID, color, align, variant, classes, component, display, noWrap, gutterBottom, paragraph, variantMapping } = props;
+      return (React__default['default'].createElement(natdsWeb.Typography, { "data-testid": testID, color: color, align: align, variant: variant, classes: classes, component: component, display: display, noWrap: noWrap, gutterBottom: gutterBottom, paragraph: paragraph, variantMapping: variantMapping }, children));
+  };
+
+  const TextField = (props) => {
+      const { onChangeText, value, type, label, helpText, placeholder, testID } = props;
+      const handleChangeText = (e) => {
+          const { value } = e.target;
+          onChangeText(value);
+      };
+      return (React__default['default'].createElement(natdsWeb.TextField, { onChange: handleChangeText, value: value, type: type, label: label, helpText: helpText, placeholder: placeholder, "data-testid": testID }));
+  };
+
+  const themes = natdsWeb.themes;
+
   const ToggleButton = ({ iconOff, iconOn, onPress }) => {
       return (React__default['default'].createElement(natdsWeb.ToggleButton, { iconOff: iconOff, iconOn: iconOn, onClick: onPress }));
   };
@@ -195,56 +248,22 @@
       return (React__default['default'].createElement(natdsWeb.Toolbar, { variant: variant, color: color, disableGutters: disableGutters }, children));
   };
 
-  const AppBarHighlight = (props) => {
-      const { children, className, component } = props;
-      return (React__default['default'].createElement(natdsWeb.AppBarHighlight, { className: className, component: component }, children));
+  const StyledView = styled__default['default'].div `
+  display: flex;
+  flex-direction: column;
+`;
+  const View = ({ className, children, testID }) => {
+      return (React__default['default'].createElement(StyledView, { className: className, "data-testid": testID }, children));
   };
 
-  const Container = (props) => {
-      const { children, className, component, fixed, disableGutters, maxWidth, } = props;
-      return (React__default['default'].createElement(natdsWeb.Container, { className: className, component: component, fixed: fixed, disableGutters: disableGutters, maxWidth: maxWidth }, children));
+  const Snackbar = (props) => {
+      const { children, anchorOrigin, autoHideDuration, classes, key, onClose, open, TransitionComponent, action, ...rest } = props;
+      return (React__default['default'].createElement(natdsWeb.Snackbar, { anchorOrigin: anchorOrigin, autoHideDuration: autoHideDuration, classes: classes, key: key, onClose: onClose, open: open, TransitionComponent: TransitionComponent, action: action, ...rest }, children));
   };
 
-  const Provider = (props) => {
-      const { children, theme, testID, cssPrefix } = props;
-      return (React__default['default'].createElement(natdsWeb.Provider, { "data-testID": testID, theme: theme, cssPrefix: cssPrefix }, children));
-  };
-
-  const ExpansionPanelSummary = (props) => {
-      const { children, expandIcon, classes, tabIndex, action, disabled, centerRipple, disableRipple, disableTouchRipple, focusRipple, focusVisibleClassName, TouchRippleProps, IconButtonProps, onFocusVisible, } = props;
-      return (React__default['default'].createElement(natdsWeb.ExpansionPanelSummary, { expandIcon: expandIcon, classes: classes, tabIndex: tabIndex, action: action, disabled: disabled, centerRipple: centerRipple, disableRipple: disableRipple, disableTouchRipple: disableTouchRipple, focusRipple: focusRipple, focusVisibleClassName: focusVisibleClassName, onFocusVisible: onFocusVisible, TouchRippleProps: TouchRippleProps, IconButtonProps: IconButtonProps }, children));
-  };
-
-  const ExpansionPanelDetails = (props) => {
-      const { children, classes } = props;
-      return (React__default['default'].createElement(natdsWeb.ExpansionPanelDetails, { classes: classes }, children));
-  };
-
-  const ExpansionPanel = (props) => {
-      const { children, classes, onChange, TransitionComponent, TransitionProps, disabled, expanded, defaultExpanded, } = props;
-      return (React__default['default'].createElement(natdsWeb.ExpansionPanel, { classes: classes, onChange: onChange, TransitionComponent: TransitionComponent, TransitionProps: TransitionProps, disabled: disabled, expanded: expanded, defaultExpanded: defaultExpanded }, children));
-  };
-
-  const List = (props) => {
-      const { className, dense, disablePadding, subheader, children } = props;
-      return (React__default['default'].createElement(natdsWeb.List, { className: className, dense: dense, disablePadding: disablePadding, subheader: subheader }, children));
-  };
-
-  const ListSubheader = (props) => {
-      const { children, component, classes, color, disableGutters, disableSticky, inset } = props;
-      return (React__default['default'].createElement(natdsWeb.ListSubheader, { component: component, classes: classes, color: color, disableGutters: disableGutters, disableSticky: disableSticky, inset: inset }, children));
-  };
-
-  const CssBaseline = (props) => {
-      const { children, classes, testID } = props;
-      return (React__default['default'].createElement(natdsWeb.CssBaseline, { classes: classes, "data-testid": testID }, children));
-  };
-
-  const themes = natdsWeb.themes;
-
-  const Input = (props) => {
-      const { color, className, mask, margin, disabled, multiline, state, size, inputComponent, hasIcon, testID, value, onClick, onKeyPress, } = props;
-      return (React__default['default'].createElement(natdsWeb.Input, { color: color, className: className, mask: mask, margin: margin, disabled: disabled, multiline: multiline, state: state, size: size, inputComponent: inputComponent, hasIcon: hasIcon, "data-testid": testID, onClick: onClick, onKeyPress: onKeyPress, value: value }));
+  const SnackbarContent = (props) => {
+      const { classes, role, color, action, message } = props;
+      return (React__default['default'].createElement(natdsWeb.SnackbarContent, { classes: classes, role: role, color: color, action: action, message: message }));
   };
 
   exports.AppBar = AppBar;
@@ -259,6 +278,7 @@
   exports.Counter = Counter;
   exports.CssBaseline = CssBaseline;
   exports.DialogWrapper = DialogWrapper;
+  exports.Divider = Divider;
   exports.ErrorWrapper = ErrorWrapper;
   exports.ExpansionPanel = ExpansionPanel;
   exports.ExpansionPanelDetails = ExpansionPanelDetails;
@@ -277,11 +297,14 @@
   exports.ListItemText = ListItemText;
   exports.ListSubheader = ListSubheader;
   exports.Logo = Logo;
+  exports.Popover = Popover;
   exports.ProgressIndicator = ProgressIndicator;
   exports.Provider = Provider;
   exports.Radio = Radio;
   exports.Rating = Rating;
   exports.Skeleton = Skeleton;
+  exports.Snackbar = Snackbar;
+  exports.SnackbarContent = SnackbarContent;
   exports.TabContainer = TabContainer;
   exports.TabItem = TabItem;
   exports.Text = Text;
