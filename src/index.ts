@@ -18,7 +18,7 @@ export * from "./expansionPanelSummary/expansionPanelSummary";
 export * from "./horizontal-space/horizontal-space";
 export * from "./icon/icon";
 export * from "./iconButton/iconButton";
-export * from "./image/image";
+export * from "./image/image"; // Isabela
 export * from "./input/input";
 export * from "./link/link";
 export * from "./list/list";
@@ -27,7 +27,7 @@ export * from "./listItemAvatar/listItemAvatar";
 export * from "./listItemIcon/listItemIcon";
 export * from "./listItemSecondaryAction/listItemSecondaryAction";
 export * from "./listItemText/listItemText";
-export * from "./listSubheader/listSubheader";
+export * from "./listSubheader/listSubheader"; // Isabela
 export * from "./logo/logo";
 export * from "./popover/popover";
 export * from "./progress-indicator/progress-indicator";

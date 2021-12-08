@@ -1,15 +1,8 @@
 import React from 'react';
-import { ListItemIcon as NatListItemIcon } from '@naturacosmeticos/natds-web';
+import { IListItemIconProps, ListItemIcon as NatListItemIcon } from '@naturacosmeticos/natds-web';
 
-import { IWebListItemIconProps } from './types';
+export const ListItemIcon = React.forwardRef<unknown, IListItemIconProps>(
+  (props: IListItemIconProps, ref) => <NatListItemIcon {...props} ref={ref} />
+)
 
-export const ListItemIcon = (props: IWebListItemIconProps): React.ReactElement => {
-  const { testID, children } = props;
-  return (
-    <NatListItemIcon
-      data-testID={testID}
-    >
-      {children}
-    </NatListItemIcon>
-  )
-}
+ListItemIcon.displayName = 'ListItemIcon';
