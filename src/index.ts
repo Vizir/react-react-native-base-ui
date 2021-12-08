@@ -41,3 +41,5 @@ export * from "./listSubheader/listSubheader";
 export * from "./cssBaseline/cssBaseline";
 export * from "./themes/themes";
 export * from "./input/input";
+export * from "./snackbar/snackbar";
+export * from "./snackbarContent/snackbarContent";
