@@ -3,10 +3,10 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { ActionContentSample, DialogContentSample } from "./utils/dialog.utils";
 
-import { DialogWrapper } from "../dialog/dialog-wrapper";
+import { DialogWrapper } from "../dialogWrapper/dialogWrapper";
 
 export default {
-  title: "Components/DialogWrapper",
+  title: "Components/Dialog",
   argTypes: {
     openButtonText: {
       description:

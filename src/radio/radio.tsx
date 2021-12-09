@@ -1,10 +1,14 @@
-import React from 'react';
-import { Radio as NatRadio } from '@naturacosmeticos/natds-web';
+import React from "react";
+import { Radio as NatRadio } from "@naturacosmeticos/natds-web";
 
-import { IRadioProps } from './types';
+import { IRadioProps } from "./types";
 
-export const Radio = ({...props}: IRadioProps): React.ReactElement => {
-  return (
-    <NatRadio {...props} />
-  )
-}
+export const Radio = React.forwardRef<HTMLButtonElement, IRadioProps>(
+  (props: IRadioProps, ref) => {
+    const { ...rest } = props;
+
+    return <NatRadio {...rest} ref={ref} />;
+  }
+);
+
+Radio.displayName = "Radio";
