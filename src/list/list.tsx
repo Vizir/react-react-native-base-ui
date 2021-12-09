@@ -3,16 +3,11 @@ import { List as NatList } from "@naturacosmeticos/natds-web";
 
 import { IWebListProps } from "./types";
 
-export const List = (props: IWebListProps): React.ReactElement => {
-  const { className, dense, disablePadding, subheader, children } = props;
+export const List = React.forwardRef<HTMLUListElement, IWebListProps>((props: IWebListProps, ref) => {
+  const {children} = props;
   return (
-    <NatList
-      className={className}
-      dense={dense}
-      disablePadding={disablePadding}
-      subheader={subheader}
-    >
-      {children}
-    </NatList>
-  );
-};
+    <NatList {...props} ref={ref}>{children}</NatList>
+  )
+});
+
+List.displayName = 'List';
