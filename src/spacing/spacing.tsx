@@ -3,7 +3,7 @@ import { Spacing as NatSpacing } from "@naturacosmeticos/natds-web";
 
 import { IWebSpacingProps } from "./types";
 
-export const Spacing = React.forwardRef<unknown, IWebSpacingProps>(
+export const Spacing = React.forwardRef<HTMLElement, IWebSpacingProps>(
   (props: IWebSpacingProps) => {
     const { children, className, display, style, testID, ...rest } = props;
     return (

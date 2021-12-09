@@ -4,7 +4,7 @@ import { ExpansionPanelDetails as NatExpansionPanelDetails } from "@naturacosmet
 import { IExpansionPanelDetailsProps } from "./types";
 
 export const ExpansionPanelDetails = React.forwardRef<
-  unknown,
+  HTMLDivElement,
   IExpansionPanelDetailsProps
 >((props: IExpansionPanelDetailsProps, ref) => {
   const { children, classes, ...rest } = props;
