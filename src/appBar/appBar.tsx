@@ -3,7 +3,7 @@ import { AppBar as NatAppBar } from "@naturacosmeticos/natds-web";
 
 import { IAppBarProps } from "./types";
 
-export const AppBar = React.forwardRef<unknown, IAppBarProps>(
+export const AppBar = React.forwardRef<HTMLDivElement, IAppBarProps>(
   ({ children, position, color, classes, ...rest }: IAppBarProps, ref) => (
     <NatAppBar
       position={position}
