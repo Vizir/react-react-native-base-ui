@@ -1,6 +1,6 @@
 {
   "name": "githubapp-base-ui",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "license": "MIT",
   "private": true,
   "main": "dist/index.web.cjs.js",
