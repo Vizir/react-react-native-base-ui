@@ -3,7 +3,7 @@ import { Popover as NatPopover } from "@naturacosmeticos/natds-web";
 
 import { IPopoverProps } from "./types";
 
-export const Popover = React.forwardRef<HTMLButtonElement, IPopoverProps>(
+export const Popover = React.forwardRef<HTMLDivElement, IPopoverProps>(
   (props: IPopoverProps, ref) => {
     const {
       children,

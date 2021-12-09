@@ -3,7 +3,7 @@ import { Dialog as NatDialog } from "@naturacosmeticos/natds-web";
 
 import { IDialogProps } from "./types";
 
-export const Dialog = React.forwardRef<HTMLButtonElement, IDialogProps>(
+export const Dialog = React.forwardRef<HTMLDivElement, IDialogProps>(
   (props: IDialogProps, ref) => {
     const {
       children,

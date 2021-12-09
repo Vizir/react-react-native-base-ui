@@ -4,7 +4,7 @@ import { DialogActions as NatDialogActions } from "@naturacosmeticos/natds-web";
 import { IDialogActionsProps } from "./types";
 
 export const DialogActions = React.forwardRef<
-  HTMLButtonElement,
+  HTMLDivElement,
   IDialogActionsProps
 >((props: IDialogActionsProps, ref) => {
   const { children, disableSpacing, ...rest } = props;

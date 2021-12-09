@@ -4,7 +4,7 @@ import { DialogContent as NatDialogContent } from "@naturacosmeticos/natds-web";
 import { IDialogContentProps } from "./types";
 
 export const DialogContent = React.forwardRef<
-  HTMLButtonElement,
+  HTMLDivElement,
   IDialogContentProps
 >((props: IDialogContentProps, ref) => {
   const { children, ...rest } = props;
