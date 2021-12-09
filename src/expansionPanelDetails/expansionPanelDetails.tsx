@@ -3,14 +3,16 @@ import { ExpansionPanelDetails as NatExpansionPanelDetails } from "@naturacosmet
 
 import { IExpansionPanelDetailsProps } from "./types";
 
-export const ExpansionPanelDetails = (
-  props: IExpansionPanelDetailsProps
-): React.ReactElement => {
-  const { children, classes } = props;
-
+export const ExpansionPanelDetails = React.forwardRef<
+  HTMLDivElement,
+  IExpansionPanelDetailsProps
+>((props: IExpansionPanelDetailsProps, ref) => {
+  const { children, classes, ...rest } = props;
   return (
-    <NatExpansionPanelDetails classes={classes}>
+    <NatExpansionPanelDetails classes={classes} ref={ref} {...rest}>
       {children}
     </NatExpansionPanelDetails>
   );
-};
+});
+
+ExpansionPanelDetails.displayName = "ExpansionPanelDetails";

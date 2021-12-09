@@ -3,9 +3,10 @@ import { ExpansionPanel as NatExpansionPanel } from "@naturacosmeticos/natds-web
 
 import { IExpansionPanelProps } from "./types";
 
-export const ExpansionPanel = (
-  props: IExpansionPanelProps
-): React.ReactElement => {
+export const ExpansionPanel = React.forwardRef<
+  HTMLDivElement,
+  IExpansionPanelProps
+>((props: IExpansionPanelProps, ref) => {
   const {
     children,
     classes,
@@ -15,8 +16,8 @@ export const ExpansionPanel = (
     disabled,
     expanded,
     defaultExpanded,
+    ...rest
   } = props;
-
   return (
     <NatExpansionPanel
       classes={classes}
@@ -26,8 +27,12 @@ export const ExpansionPanel = (
       disabled={disabled}
       expanded={expanded}
       defaultExpanded={defaultExpanded}
+      ref={ref}
+      {...rest}
     >
       {children}
     </NatExpansionPanel>
   );
-};
+});
+
+ExpansionPanel.displayName = "ExpansionPanel";
