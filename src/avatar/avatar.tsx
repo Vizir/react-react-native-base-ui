@@ -1,12 +1,25 @@
 import React from "react";
 import { Avatar as NatAvatar } from "@naturacosmeticos/natds-web";
 
-import { IAvatarProps } from "./types";
+import { IWebAvatarProps } from "./types";
 
-export const Avatar = (props: IAvatarProps): React.ReactElement => {
-  const { testID, size, variant, alt, imgProps, color, children, src, srcSet, sizes } = props;
-
-  return (
+export const Avatar = React.forwardRef<HTMLDivElement, IWebAvatarProps>(
+  (
+    {
+      testID,
+      size,
+      variant,
+      alt,
+      imgProps,
+      color,
+      children,
+      src,
+      srcSet,
+      sizes,
+      ...rest
+    }: IWebAvatarProps,
+    ref
+  ) => (
     <NatAvatar
       color={color}
       data-testid={testID}
@@ -17,8 +30,12 @@ export const Avatar = (props: IAvatarProps): React.ReactElement => {
       src={src}
       srcSet={srcSet}
       sizes={sizes}
+      ref={ref}
+      {...rest}
     >
       {children}
     </NatAvatar>
-  );
-};
+  )
+);
+
+Avatar.displayName = "Avatar";

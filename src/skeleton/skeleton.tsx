@@ -1,17 +1,19 @@
-import React from 'react';
-import {Skeleton as NatSkeleton} from '@naturacosmeticos/natds-web';
+import React from "react";
+import { Skeleton as NatSkeleton } from "@naturacosmeticos/natds-web";
 
-import { ISkeletonProps } from './types';
+import { ISkeletonProps } from "./types";
 
-export const Skeleton = (props: ISkeletonProps): React.ReactElement => {
-    const {
-        variant,
-        height,
-        width,
-        animation,
-    } = props;
+export const Skeleton = React.forwardRef<HTMLDivElement, ISkeletonProps>(
+  ({ variant, height, width, animation, ...rest }: ISkeletonProps, ref) => (
+    <NatSkeleton
+      variant={variant}
+      height={height}
+      width={width}
+      animation={animation}
+      ref={ref}
+      {...rest}
+    />
+  )
+);
 
-    return (
-        <NatSkeleton variant={variant} height={height} width={width} animation={animation} />
-    );
-}
+Skeleton.displayName = "Skeleton";

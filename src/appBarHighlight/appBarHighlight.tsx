@@ -3,11 +3,12 @@ import { AppBarHighlight as NatAppBarHighlight } from "@naturacosmeticos/natds-w
 
 import { IAppBarHighlightProps } from "./types";
 
-export const AppBarHighlight = (props: IAppBarHighlightProps): React.ReactElement => {
-  const { children, className, component } = props;
-  return (
-    <NatAppBarHighlight className={className} component={component}>
+export const AppBarHighlight = React.forwardRef<unknown, IAppBarHighlightProps>(
+  ({ children, className, component, ...rest }: IAppBarHighlightProps) => (
+    <NatAppBarHighlight className={className} component={component} {...rest}>
       {children}
     </NatAppBarHighlight>
-  );
-};
+  )
+);
+
+AppBarHighlight.displayName = "AppBarHighlight";

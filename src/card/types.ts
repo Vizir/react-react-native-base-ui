@@ -1,8 +1,5 @@
-import React from "react";
+import { ICardProps as IWebCardProps } from "@naturacosmeticos/natds-web";
 
-export interface ICardProps {
-  children: React.ReactNode;
+export interface ICardProps extends IWebCardProps {
   testID?: string;
-  elevation?: number;
-  square?: boolean;
 }

@@ -3,22 +3,19 @@ import { SnackbarContent as NatSnackbarContent } from "@naturacosmeticos/natds-w
 
 import { IWebSnackbarContentProps } from "./types";
 
-export const SnackbarContent = (props: IWebSnackbarContentProps): React.ReactElement => {
-  const {
-    classes,
-    role,
-    color,
-    action,
-    message
-  } = props;
+export const SnackbarContent = React.forwardRef< HTMLElement, IWebSnackbarContentProps >((props: IWebSnackbarContentProps, ref) => {
+  const { classes, role, color, action, message } = props;
 
   return (
-      <NatSnackbarContent
-        classes={classes}
-        role={role}
-        color={color}
-        action={action}
-        message={message}
-      />
-    );
-};
+    <NatSnackbarContent
+      classes={classes}
+      role={role}
+      color={color}
+      action={action}
+      message={message}
+      ref={ref}
+    />
+  );
+});
+
+SnackbarContent.displayName = "SnackbarContent";
