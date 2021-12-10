@@ -1,6 +1,19 @@
-import React from 'react';
-import { IListItemSecondaryActionProps, ListItemSecondaryAction as NatListItemSecondaryAction } from "@naturacosmeticos/natds-web";
+import React from "react";
+import { ListItemSecondaryAction as NatListItemSecondaryAction } from "@naturacosmeticos/natds-web";
 
-export const ListItemSecondaryAction = React.forwardRef<IListItemSecondaryActionProps>((props: IListItemSecondaryActionProps, ref) => <NatListItemSecondaryAction {...props} ref={ref} />)
+import { IWebListItemSecondaryActionProps } from "./types";
 
-ListItemSecondaryAction.displayName = 'ListItemSecondaryAction';
+export const ListItemSecondaryAction = React.forwardRef<
+  unknown,
+  IWebListItemSecondaryActionProps
+>((props: IWebListItemSecondaryActionProps, ref) => {
+  const { children, ...rest } = props;
+
+  return (
+    <NatListItemSecondaryAction {...rest} ref={ref}>
+      {children}
+    </NatListItemSecondaryAction>
+  );
+});
+
+ListItemSecondaryAction.displayName = "ListItemSecondaryAction";
