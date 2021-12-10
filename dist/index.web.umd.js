@@ -21,7 +21,7 @@
   const Badge = React__default['default'].forwardRef(({ children, anchorOrigin, badgeContent, color, invisible, max, overlap, showZero, variant, testID, ...rest }, ref) => (React__default['default'].createElement(natdsWeb.Badge, { anchorOrigin: anchorOrigin, badgeContent: badgeContent, color: color, invisible: invisible, max: max, overlap: overlap, showZero: showZero, variant: variant, "data-testid": testID, ref: ref, ...rest }, children)));
   Badge.displayName = "Badge";
 
-  const Button = React__default['default'].forwardRef(({ color = "primary", variant = "contained", size = "medium", text, ...rest }, ref) => (React__default['default'].createElement(natdsWeb.Button, { color: color, variant: variant, size: size, ...rest, ref: ref }, text)));
+  const Button = React__default['default'].forwardRef(({ color = "primary", variant = "contained", size = "medium", text, onPress, ...rest }, ref) => (React__default['default'].createElement(natdsWeb.Button, { color: color, variant: variant, size: size, ...rest, onClick: onPress, ref: ref }, text)));
   Button.displayName = "Button";
 
   const Card = React__default['default'].forwardRef(({ children, elevation, className, testID, square, ...rest }, ref) => (React__default['default'].createElement(natdsWeb.Card, { elevation: elevation, className: className, "data-testID": testID, ref: ref, square: square, ...rest }, children)));
