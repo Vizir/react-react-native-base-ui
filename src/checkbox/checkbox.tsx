@@ -3,34 +3,37 @@ import { Checkbox as NatCheckbox } from "@naturacosmeticos/natds-web";
 
 import { ICheckboxProps } from "./types";
 
-export const Checkbox = (props: ICheckboxProps): React.ReactElement => {
-  const {
-    checked,
-    color,
-    disabled,
-    indeterminate,
-    action,
-    disableFocusRipple,
-    edge,
-    centerRipple,
-    disableTouchRipple,
-    focusRipple,
-    focusVisibleClassName,
-    onFocusVisible,
-    TouchRippleProps,
-    checkedIcon,
-    classes,
-    disableRipple,
-    icon,
-    id,
-    indeterminateIcon,
-    inputProps,
-    inputRef,
-    onChange,
-    required,
-    value,
-  } = props;
-  return (
+export const Checkbox = React.forwardRef<HTMLButtonElement, ICheckboxProps>(
+  (
+    {
+      checked,
+      color,
+      disabled,
+      indeterminate,
+      action,
+      disableFocusRipple,
+      edge,
+      centerRipple,
+      disableTouchRipple,
+      focusRipple,
+      focusVisibleClassName,
+      onFocusVisible,
+      TouchRippleProps,
+      checkedIcon,
+      classes,
+      disableRipple,
+      icon,
+      id,
+      indeterminateIcon,
+      inputProps,
+      inputRef,
+      onChange,
+      required,
+      value,
+      ...rest
+    }: ICheckboxProps,
+    ref
+  ) => (
     <NatCheckbox
       checked={checked}
       color={color}
@@ -56,6 +59,10 @@ export const Checkbox = (props: ICheckboxProps): React.ReactElement => {
       onChange={onChange}
       required={required}
       value={value}
+      ref={ref}
+      {...rest}
     />
-  );
-};
+  )
+);
+
+Checkbox.displayName = "Checkbox";

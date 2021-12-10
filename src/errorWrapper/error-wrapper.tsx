@@ -4,9 +4,11 @@ import { Button as NatButton, Typography } from "@naturacosmeticos/natds-web";
 import { IErrorWrapperProps } from "./types";
 import { ContainerWrapper, LinkButton, Title } from "./styled";
 
-export const ErrorWrapper = (props: IErrorWrapperProps): React.ReactElement => {
+export const ErrorWrapper = React.forwardRef<
+  HTMLDivElement,
+  IErrorWrapperProps
+>((props: IErrorWrapperProps) => {
   const { icon, title, description, textButton, actionButton } = props;
-
   return (
     <ContainerWrapper>
       {icon && (
@@ -47,4 +49,6 @@ export const ErrorWrapper = (props: IErrorWrapperProps): React.ReactElement => {
       )}
     </ContainerWrapper>
   );
-};
+});
+
+ErrorWrapper.displayName = "ErrorWrapper";

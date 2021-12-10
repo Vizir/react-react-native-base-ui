@@ -1,16 +1,20 @@
-import React from 'react';
-import { AppBar as NatAppBar } from '@naturacosmeticos/natds-web';
+import React from "react";
+import { AppBar as NatAppBar } from "@naturacosmeticos/natds-web";
 
-import { IAppBarProps } from './types';
+import { IAppBarProps } from "./types";
 
-export const AppBar = ({children, position, color, classes }:IAppBarProps): React.ReactElement => {
-  return (
+export const AppBar = React.forwardRef<HTMLDivElement, IAppBarProps>(
+  ({ children, position, color, classes, ...rest }: IAppBarProps, ref) => (
     <NatAppBar
       position={position}
       color={color}
       classes={classes}
+      ref={ref}
+      {...rest}
     >
       {children}
     </NatAppBar>
   )
-}
+);
+
+AppBar.displayName = "AppBar";

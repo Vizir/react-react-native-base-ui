@@ -1,14 +1,16 @@
-import React from 'react';
-import { ListItem as NatListItem } from '@naturacosmeticos/natds-web';
+import React from "react";
+import { ListItem as NatListItem } from "@naturacosmeticos/natds-web";
 
-import { IWebListItemProps } from './types';
+import { IListItemProps } from "./types";
 
-export const ListItem = (props: IWebListItemProps): React.ReactElement => {
-  const { component, testID } = props;
-  return (
-    <NatListItem
-      component={component}
-      data-testID={testID}
-    />
-  )
-}
+export const ListItem = React.forwardRef(
+  (props: IListItemProps) => {
+    const {children} = props;
+
+    return (
+      <NatListItem>{children}</NatListItem>
+    )
+  }
+)
+
+ListItem.displayName = 'ListItem';

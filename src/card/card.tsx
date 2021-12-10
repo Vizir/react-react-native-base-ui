@@ -3,8 +3,22 @@ import { Card as NatCard } from "@naturacosmeticos/natds-web";
 
 import { ICardProps } from "./types";
 
-export const Card = (props: ICardProps): React.ReactElement => {
-  const { children, testID, elevation, square } = props;
+export const Card = React.forwardRef<HTMLDivElement, ICardProps>(
+  (
+    { children, elevation, className, testID, square, ...rest }: ICardProps,
+    ref
+  ) => (
+    <NatCard
+      elevation={elevation}
+      className={className}
+      data-testid={testID}
+      ref={ref}
+      square={square}
+      {...rest}
+    >
+      {children}
+    </NatCard>
+  )
+);
 
-  return <NatCard data-testId={testID} elevation={elevation} square={square} >{children}</NatCard>;
-};
+Card.displayName = "Card";

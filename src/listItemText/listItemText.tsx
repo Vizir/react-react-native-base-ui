@@ -1,18 +1,19 @@
-import React from 'react';
-import { ListItemText as NatListItemText } from '@naturacosmeticos/natds-web';
+import React from "react";
+import {
+  ListItemText as NatListItemText,
+  IListItemTextProps,
+} from "@naturacosmeticos/natds-web";
 
-import { IWebListItemTextProps } from './types';
+export const ListItemText = React.forwardRef<unknown, IListItemTextProps>(
+  (props: IListItemTextProps, ref) => {
+    const { children, ...rest } = props;
 
-export const ListItemText = (props: IWebListItemTextProps): React.ReactElement => {
-  const { testID, children, primary, secondary, ...rest } = props;
-  return (
-    <NatListItemText
-      primary={primary}
-      secondary={secondary}
-      data-testID={testID}
-      {...rest}
-    >
-      {children}
-    </NatListItemText>
-  )
-}
+    return (
+      <NatListItemText {...rest} ref={ref}>
+        {children}
+      </NatListItemText>
+    );
+  }
+);
+
+ListItemText.displayName = "ListItemText";
