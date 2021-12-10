@@ -10,11 +10,19 @@ export const Button = React.forwardRef<HTMLButtonElement, IWebButtonProps>(
       variant = "contained",
       size = "medium",
       text,
+      onPress,
       ...rest
     }: IWebButtonProps,
     ref
   ) => (
-    <NatButton color={color} variant={variant} size={size} {...rest} ref={ref}>
+    <NatButton
+      color={color}
+      variant={variant}
+      size={size}
+      {...rest}
+      onClick={onPress}
+      ref={ref}
+    >
       {text}
     </NatButton>
   )
