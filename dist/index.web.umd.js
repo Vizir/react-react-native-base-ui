@@ -24,7 +24,7 @@
   const Button = React__default['default'].forwardRef(({ color = "primary", variant = "contained", size = "medium", text, onPress, ...rest }, ref) => (React__default['default'].createElement(natdsWeb.Button, { color: color, variant: variant, size: size, ...rest, onClick: onPress, ref: ref }, text)));
   Button.displayName = "Button";
 
-  const Card = React__default['default'].forwardRef(({ children, elevation, className, testID, square, ...rest }, ref) => (React__default['default'].createElement(natdsWeb.Card, { elevation: elevation, className: className, "data-testID": testID, ref: ref, square: square, ...rest }, children)));
+  const Card = React__default['default'].forwardRef(({ children, elevation, className, testID, square, ...rest }, ref) => (React__default['default'].createElement(natdsWeb.Card, { elevation: elevation, className: className, "data-testid": testID, ref: ref, square: square, ...rest }, children)));
   Card.displayName = "Card";
 
   const Checkbox = React__default['default'].forwardRef(({ checked, color, disabled, indeterminate, action, disableFocusRipple, edge, centerRipple, disableTouchRipple, focusRipple, focusVisibleClassName, onFocusVisible, TouchRippleProps, checkedIcon, classes, disableRipple, icon, id, indeterminateIcon, inputProps, inputRef, onChange, required, value, ...rest }, ref) => (React__default['default'].createElement(natdsWeb.Checkbox, { checked: checked, color: color, disabled: disabled, indeterminate: indeterminate, action: action, disableFocusRipple: disableFocusRipple, edge: edge, centerRipple: centerRipple, disableTouchRipple: disableTouchRipple, focusRipple: focusRipple, focusVisibleClassName: focusVisibleClassName, onFocusVisible: onFocusVisible, TouchRippleProps: TouchRippleProps, checkedIcon: checkedIcon, classes: classes, disableRipple: disableRipple, icon: icon, id: id, indeterminateIcon: indeterminateIcon, inputProps: inputProps, inputRef: inputRef, onChange: onChange, required: required, value: value, ref: ref, ...rest })));
@@ -151,16 +151,28 @@
   });
   ListItemAvatar.displayName = 'ListItemAvatar';
 
-  const ListItemIcon = React__default['default'].forwardRef((props, ref) => React__default['default'].createElement(natdsWeb.ListItemIcon, { ...props, ref: ref }));
-  ListItemIcon.displayName = 'ListItemIcon';
+  const ListItemIcon = React__default['default'].forwardRef((props, ref) => {
+      const { children, ...rest } = props;
+      return (React__default['default'].createElement(natdsWeb.ListItemIcon, { ...rest, ref: ref }, children));
+  });
+  ListItemIcon.displayName = "ListItemIcon";
 
-  const ListItemSecondaryAction = React__default['default'].forwardRef((props, ref) => React__default['default'].createElement(natdsWeb.ListItemSecondaryAction, { ...props, ref: ref }));
-  ListItemSecondaryAction.displayName = 'ListItemSecondaryAction';
+  const ListItemSecondaryAction = React__default['default'].forwardRef((props, ref) => {
+      const { children, ...rest } = props;
+      return (React__default['default'].createElement(natdsWeb.ListItemSecondaryAction, { ...rest, ref: ref }, children));
+  });
+  ListItemSecondaryAction.displayName = "ListItemSecondaryAction";
 
-  const ListItemText = React__default['default'].forwardRef((props, ref) => React__default['default'].createElement(natdsWeb.ListItemText, { ...props, ref: ref }));
-  ListItemText.displayName = 'ListItemText';
+  const ListItemText = React__default['default'].forwardRef((props, ref) => {
+      const { children, ...rest } = props;
+      return (React__default['default'].createElement(natdsWeb.ListItemText, { ...rest, ref: ref }, children));
+  });
+  ListItemText.displayName = "ListItemText";
 
-  const ListSubheader = React__default['default'].forwardRef((props) => React__default['default'].createElement(natdsWeb.ListSubheader, { ...props }));
+  const ListSubheader = React__default['default'].forwardRef((props) => {
+      const { children, ...rest } = props;
+      return (React__default['default'].createElement(natdsWeb.ListSubheader, { ...rest }, children));
+  });
   ListSubheader.displayName = 'ListSubheader';
 
   const Logo = React__default['default'].forwardRef((props) => {
@@ -213,7 +225,7 @@
 
   const Spacing = React__default['default'].forwardRef((props) => {
       const { children, className, display, style, testID, ...rest } = props;
-      return (React__default['default'].createElement(natdsWeb.Spacing, { className: className, display: display, style: style, "data-testId": testID, ...rest }, children));
+      return (React__default['default'].createElement(natdsWeb.Spacing, { className: className, display: display, style: style, "data-testid": testID, ...rest }, children));
   });
   Spacing.displayName = "Spacing";
 

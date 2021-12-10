@@ -18,7 +18,7 @@ Badge.displayName = "Badge";
 const Button = React.forwardRef(({ color = "primary", variant = "contained", size = "medium", text, onPress, ...rest }, ref) => (React.createElement(Button$1, { color: color, variant: variant, size: size, ...rest, onClick: onPress, ref: ref }, text)));
 Button.displayName = "Button";
 
-const Card = React.forwardRef(({ children, elevation, className, testID, square, ...rest }, ref) => (React.createElement(Card$1, { elevation: elevation, className: className, "data-testID": testID, ref: ref, square: square, ...rest }, children)));
+const Card = React.forwardRef(({ children, elevation, className, testID, square, ...rest }, ref) => (React.createElement(Card$1, { elevation: elevation, className: className, "data-testid": testID, ref: ref, square: square, ...rest }, children)));
 Card.displayName = "Card";
 
 const Checkbox = React.forwardRef(({ checked, color, disabled, indeterminate, action, disableFocusRipple, edge, centerRipple, disableTouchRipple, focusRipple, focusVisibleClassName, onFocusVisible, TouchRippleProps, checkedIcon, classes, disableRipple, icon, id, indeterminateIcon, inputProps, inputRef, onChange, required, value, ...rest }, ref) => (React.createElement(Checkbox$1, { checked: checked, color: color, disabled: disabled, indeterminate: indeterminate, action: action, disableFocusRipple: disableFocusRipple, edge: edge, centerRipple: centerRipple, disableTouchRipple: disableTouchRipple, focusRipple: focusRipple, focusVisibleClassName: focusVisibleClassName, onFocusVisible: onFocusVisible, TouchRippleProps: TouchRippleProps, checkedIcon: checkedIcon, classes: classes, disableRipple: disableRipple, icon: icon, id: id, indeterminateIcon: indeterminateIcon, inputProps: inputProps, inputRef: inputRef, onChange: onChange, required: required, value: value, ref: ref, ...rest })));
@@ -145,16 +145,28 @@ const ListItemAvatar = React.forwardRef((props, ref) => {
 });
 ListItemAvatar.displayName = 'ListItemAvatar';
 
-const ListItemIcon = React.forwardRef((props, ref) => React.createElement(ListItemIcon$1, { ...props, ref: ref }));
-ListItemIcon.displayName = 'ListItemIcon';
+const ListItemIcon = React.forwardRef((props, ref) => {
+    const { children, ...rest } = props;
+    return (React.createElement(ListItemIcon$1, { ...rest, ref: ref }, children));
+});
+ListItemIcon.displayName = "ListItemIcon";
 
-const ListItemSecondaryAction = React.forwardRef((props, ref) => React.createElement(ListItemSecondaryAction$1, { ...props, ref: ref }));
-ListItemSecondaryAction.displayName = 'ListItemSecondaryAction';
+const ListItemSecondaryAction = React.forwardRef((props, ref) => {
+    const { children, ...rest } = props;
+    return (React.createElement(ListItemSecondaryAction$1, { ...rest, ref: ref }, children));
+});
+ListItemSecondaryAction.displayName = "ListItemSecondaryAction";
 
-const ListItemText = React.forwardRef((props, ref) => React.createElement(ListItemText$1, { ...props, ref: ref }));
-ListItemText.displayName = 'ListItemText';
+const ListItemText = React.forwardRef((props, ref) => {
+    const { children, ...rest } = props;
+    return (React.createElement(ListItemText$1, { ...rest, ref: ref }, children));
+});
+ListItemText.displayName = "ListItemText";
 
-const ListSubheader = React.forwardRef((props) => React.createElement(ListSubheader$1, { ...props }));
+const ListSubheader = React.forwardRef((props) => {
+    const { children, ...rest } = props;
+    return (React.createElement(ListSubheader$1, { ...rest }, children));
+});
 ListSubheader.displayName = 'ListSubheader';
 
 const Logo = React.forwardRef((props) => {
@@ -207,7 +219,7 @@ Snackbar.displayName = "Snackbar";
 
 const Spacing = React.forwardRef((props) => {
     const { children, className, display, style, testID, ...rest } = props;
-    return (React.createElement(Spacing$1, { className: className, display: display, style: style, "data-testId": testID, ...rest }, children));
+    return (React.createElement(Spacing$1, { className: className, display: display, style: style, "data-testid": testID, ...rest }, children));
 });
 Spacing.displayName = "Spacing";
 
