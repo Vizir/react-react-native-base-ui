@@ -64,7 +64,7 @@ export default {
     },
     onPress: {
       description: "The function called when the button is pressed.",
-      controle: { type: "function" },
+      control: { type: "object" },
     },
     testID: {
       description: "The reference ID for testing components.",
@@ -122,6 +122,7 @@ Contained.args = {
   href: "",
   disableElevation: false,
   fullWidth: false,
+  onPress: (): void => console.log("Clicked"),
 };
 
 export const Text = Template.bind({});

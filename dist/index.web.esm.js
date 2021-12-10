@@ -15,7 +15,7 @@ Avatar.displayName = "Avatar";
 const Badge = React.forwardRef(({ children, anchorOrigin, badgeContent, color, invisible, max, overlap, showZero, variant, testID, ...rest }, ref) => (React.createElement(Badge$1, { anchorOrigin: anchorOrigin, badgeContent: badgeContent, color: color, invisible: invisible, max: max, overlap: overlap, showZero: showZero, variant: variant, "data-testid": testID, ref: ref, ...rest }, children)));
 Badge.displayName = "Badge";
 
-const Button = React.forwardRef(({ color = "primary", variant = "contained", size = "medium", text, ...rest }, ref) => (React.createElement(Button$1, { color: color, variant: variant, size: size, ...rest, ref: ref }, text)));
+const Button = React.forwardRef(({ color = "primary", variant = "contained", size = "medium", text, onPress, ...rest }, ref) => (React.createElement(Button$1, { color: color, variant: variant, size: size, ...rest, onClick: onPress, ref: ref }, text)));
 Button.displayName = "Button";
 
 const Card = React.forwardRef(({ children, elevation, className, testID, square, ...rest }, ref) => (React.createElement(Card$1, { elevation: elevation, className: className, "data-testID": testID, ref: ref, square: square, ...rest }, children)));
