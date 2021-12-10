@@ -1,6 +1,18 @@
 import React from 'react';
-import { ListSubheader as NatListSubheader , IListSubheaderProps} from '@naturacosmeticos/natds-web';
+import { ListSubheader as NatListSubheader } from '@naturacosmeticos/natds-web';
 
-export const ListSubheader = React.forwardRef<IListSubheaderProps>((props: IListSubheaderProps) => <NatListSubheader {...props} />);
+import { IListSubheaderProps } from './types';
+
+export const ListSubheader = React.forwardRef<unknown, IListSubheaderProps>(
+  (props: IListSubheaderProps) => {
+    const { children, ...rest } = props;
+
+    return (
+      <NatListSubheader {...rest}>
+        {children}
+      </NatListSubheader>
+    );
+  }
+);
 
 ListSubheader.displayName = 'ListSubheader';

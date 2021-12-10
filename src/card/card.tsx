@@ -11,7 +11,7 @@ export const Card = React.forwardRef<HTMLDivElement, ICardProps>(
     <NatCard
       elevation={elevation}
       className={className}
-      data-testID={testID}
+      data-testId={testID}
       ref={ref}
       square={square}
       {...rest}
