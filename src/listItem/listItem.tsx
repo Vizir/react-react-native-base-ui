@@ -3,14 +3,35 @@ import { ListItem as NatListItem } from "@naturacosmeticos/natds-web";
 
 import { IListItemProps } from "./types";
 
-export const ListItem = React.forwardRef(
-  (props: IListItemProps) => {
-    const {children} = props;
+export const ListItem = (props: IListItemProps): React.ReactElement => {
+  const {
+    children,
+    alignItems,
+    autoFocus,
+    classes,
+    ContainerComponent,
+    ContainerProps,
+    dense,
+    disabled,
+    disableGutters,
+    divider,
+    selected,
+  } = props;
 
-    return (
-      <NatListItem>{children}</NatListItem>
-    )
-  }
-)
-
-ListItem.displayName = 'ListItem';
+  return (
+    <NatListItem
+      alignItems={alignItems}
+      autoFocus={autoFocus}
+      classes={classes}
+      ContainerComponent={ContainerComponent}
+      ContainerProps={ContainerProps}
+      dense={dense}
+      disabled={disabled}
+      disableGutters={disableGutters}
+      divider={divider}
+      selected={selected}
+    >
+      {children}
+    </NatListItem>
+  );
+};
