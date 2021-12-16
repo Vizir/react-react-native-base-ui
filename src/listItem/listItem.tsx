@@ -16,6 +16,7 @@ export const ListItem = (props: IListItemProps): React.ReactElement => {
     disableGutters,
     divider,
     selected,
+    ...rest
   } = props;
 
   return (
@@ -30,6 +31,7 @@ export const ListItem = (props: IListItemProps): React.ReactElement => {
       disableGutters={disableGutters}
       divider={divider}
       selected={selected}
+      {...rest}
     >
       {children}
     </NatListItem>
