@@ -21,7 +21,7 @@ export const ListItem = (props: IWebListItemProps): React.ReactElement => {
   } = props;
   return (
     <NatListItem
-      data-testID={testID}
+      data-testid={testID}
       disabled={disabled}
       onClick={onClick}
       selected={selected}

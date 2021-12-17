@@ -6,8 +6,10 @@ import { TabItem as TabItem$1 } from '@naturacosmeticos/natds-web/dist/Component
 const AppBar = React.forwardRef(({ children, position, color, classes, ...rest }, ref) => (React.createElement(AppBar$1, { position: position, color: color, classes: classes, ref: ref, ...rest }, children)));
 AppBar.displayName = "AppBar";
 
-const AppBarHighlight = React.forwardRef(({ children, className, component, ...rest }) => (React.createElement(AppBarHighlight$1, { className: className, component: component, ...rest }, children)));
-AppBarHighlight.displayName = "AppBarHighlight";
+const AppBarHighlight = (props) => {
+    const { children, className, component, ...rest } = props;
+    return (React.createElement(AppBarHighlight$1, { className: className, component: component, ...rest }, children));
+};
 
 const Avatar = React.forwardRef(({ testID, size, variant, alt, imgProps, color, children, src, srcSet, sizes, ...rest }, ref) => (React.createElement(Avatar$1, { color: color, "data-testid": testID, size: size, variant: variant, alt: alt, imgProps: imgProps, src: src, srcSet: srcSet, sizes: sizes, ref: ref, ...rest }, children)));
 Avatar.displayName = "Avatar";
@@ -30,11 +32,14 @@ Chip.displayName = "Chip";
 const Container = React.forwardRef(({ children, className, component, fixed, disableGutters, maxWidth, ...rest }, ref) => (React.createElement(Container$1, { className: className, component: component, fixed: fixed, disableGutters: disableGutters, maxWidth: maxWidth, ref: ref, ...rest }, children)));
 Container.displayName = "Container";
 
-const Counter = React.forwardRef(({ onChange, onDecrement, onIncrement, value, label, readOnly, size, maxValue, minValue, ...rest }) => (React.createElement(Counter$1, { value: value, label: label, readOnly: readOnly, size: size, maxValue: maxValue, minValue: minValue, onChange: onChange, onDecrement: onDecrement, onIncrement: onIncrement, ...rest })));
-Counter.displayName = "Counter";
+const Counter = (props) => {
+    const { onChange, onDecrement, onIncrement, value, label, readOnly, size, maxValue, minValue, ...rest } = props;
+    return (React.createElement(Counter$1, { value: value, label: label, readOnly: readOnly, size: size, maxValue: maxValue, minValue: minValue, onChange: onChange, onDecrement: onDecrement, onIncrement: onIncrement, ...rest }));
+};
 
-const CssBaseline = React.forwardRef((props) => React.createElement(CssBaseline$1, { ...props }));
-CssBaseline.displayName = "CssBaseline";
+const CssBaseline = (props) => {
+    return React.createElement(CssBaseline$1, { ...props });
+};
 
 const CloseButton = styled(Button$1) ``;
 
@@ -71,7 +76,7 @@ const LinkButton = styled.div `
   margin-top: 50px;
 `;
 
-const ErrorWrapper = React.forwardRef((props) => {
+const ErrorWrapper = (props) => {
     const { icon, title, description, textButton, actionButton } = props;
     return (React.createElement(ContainerWrapper, null,
         icon && (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "106", height: "106", version: "1.1" },
@@ -82,8 +87,7 @@ const ErrorWrapper = React.forwardRef((props) => {
         textButton && (React.createElement(LinkButton, null,
             React.createElement(Button$1, { color: "primary", variant: "text", onClick: actionButton, size: "large" },
                 React.createElement("strong", null, textButton))))));
-});
-ErrorWrapper.displayName = "ErrorWrapper";
+};
 
 const ExpansionPanel = React.forwardRef((props, ref) => {
     const { children, classes, onChange, TransitionComponent, TransitionProps, disabled, expanded, defaultExpanded, ...rest } = props;
@@ -133,11 +137,10 @@ const List = React.forwardRef((props, ref) => {
 });
 List.displayName = 'List';
 
-const ListItem = React.forwardRef((props) => {
-    const { children } = props;
-    return (React.createElement(ListItem$1, null, children));
-});
-ListItem.displayName = 'ListItem';
+const ListItem = (props) => {
+    const { testID, disabled, onClick, selected, alignItems, autoFocus, ContainerComponent, ContainerProps, dense, disableGutters, divider, focusVisibleClassName, children, } = props;
+    return (React.createElement(ListItem$1, { "data-testid": testID, disabled: disabled, onClick: onClick, selected: selected, alignItems: alignItems, autoFocus: autoFocus, ContainerComponent: ContainerComponent, ContainerProps: ContainerProps, dense: dense, disableGutters: disableGutters, divider: divider, focusVisibleClassName: focusVisibleClassName }, children));
+};
 
 const ListItemAvatar = React.forwardRef((props, ref) => {
     const { children } = props;
@@ -163,17 +166,15 @@ const ListItemText = React.forwardRef((props, ref) => {
 });
 ListItemText.displayName = "ListItemText";
 
-const ListSubheader = React.forwardRef((props) => {
+const ListSubheader = (props) => {
     const { children, ...rest } = props;
-    return (React.createElement(ListSubheader$1, { ...rest }, children));
-});
-ListSubheader.displayName = 'ListSubheader';
+    return React.createElement(ListSubheader$1, { ...rest }, children);
+};
 
-const Logo = React.forwardRef((props) => {
+const Logo = (props) => {
     const { color, model, size, arialabel, ...rest } = props;
     return (React.createElement(Logo$1, { color: color, model: model, size: size, arialabel: arialabel, ...rest }));
-});
-Logo.displayName = "Logo";
+};
 
 const Popover = React.forwardRef((props, ref) => {
     const { children, placement, id, maxWidth, open, component, container, direction, anchorEl, disablePortal, keepMounted, popperOptions, popperRef, transition, actionLink, ...rest } = props;
@@ -181,17 +182,15 @@ const Popover = React.forwardRef((props, ref) => {
 });
 Popover.displayName = "Popover";
 
-const ProgressIndicator = React.forwardRef((props) => {
+const ProgressIndicator = (props) => {
     const { size = 32, ...rest } = props;
     return React.createElement(ProgressIndicator$1, { size: size, ...rest });
-});
-ProgressIndicator.displayName = "ProgressIndicator";
+};
 
-const Provider = React.forwardRef((props) => {
+const Provider = (props) => {
     const { children, theme, cssPrefix, ...rest } = props;
     return (React.createElement(Provider$1, { theme: theme, cssPrefix: cssPrefix, ...rest }, children));
-});
-Provider.displayName = "Provider";
+};
 
 const Radio = React.forwardRef((props, ref) => {
     const { ...rest } = props;
@@ -199,11 +198,10 @@ const Radio = React.forwardRef((props, ref) => {
 });
 Radio.displayName = "Radio";
 
-const Rating = React.forwardRef((props) => {
+const Rating = (props) => {
     const { id, size, rate, ...rest } = props;
     return React.createElement(Rating$1, { id: id, size: size, rate: rate, ...rest });
-});
-Rating.displayName = "Rating";
+};
 
 const Skeleton = React.forwardRef(({ variant, height, width, animation, ...rest }, ref) => (React.createElement(Skeleton$1, { variant: variant, height: height, width: width, animation: animation, ref: ref, ...rest })));
 Skeleton.displayName = "Skeleton";
@@ -217,11 +215,10 @@ SnackbarContent.displayName = "SnackbarContent";
 const Snackbar = React.forwardRef(({ children, anchorOrigin, autoHideDuration, classes, key, onClose, open, TransitionComponent, action, ...rest }, ref) => (React.createElement(Snackbar$1, { anchorOrigin: anchorOrigin, autoHideDuration: autoHideDuration, classes: classes, key: key, onClose: onClose, open: open, TransitionComponent: TransitionComponent, action: action, ref: ref, ...rest }, children)));
 Snackbar.displayName = "Snackbar";
 
-const Spacing = React.forwardRef((props) => {
+const Spacing = (props) => {
     const { children, className, display, style, testID, ...rest } = props;
     return (React.createElement(Spacing$1, { className: className, display: display, style: style, "data-testid": testID, ...rest }, children));
-});
-Spacing.displayName = "Spacing";
+};
 
 const TabContainer = React.forwardRef((props, ref) => {
     const { children, value = false, variant, ...rest } = props;
