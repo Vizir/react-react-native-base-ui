@@ -1,16 +1,40 @@
 import React from "react";
 import { ListItem as NatListItem } from "@naturacosmeticos/natds-web";
 
-import { IListItemProps } from "./types";
+import { IWebListItemProps } from "./types";
 
-export const ListItem = React.forwardRef(
-  (props: IListItemProps) => {
-    const {children} = props;
-
-    return (
-      <NatListItem>{children}</NatListItem>
-    )
-  }
-)
-
-ListItem.displayName = 'ListItem';
+export const ListItem = (props: IWebListItemProps): React.ReactElement => {
+  const {
+    testID,
+    disabled,
+    onClick,
+    selected,
+    alignItems,
+    autoFocus,
+    ContainerComponent,
+    ContainerProps,
+    dense,
+    disableGutters,
+    divider,
+    focusVisibleClassName,
+    children,
+  } = props;
+  return (
+    <NatListItem
+      data-testid={testID}
+      disabled={disabled}
+      onClick={onClick}
+      selected={selected}
+      alignItems={alignItems}
+      autoFocus={autoFocus}
+      ContainerComponent={ContainerComponent}
+      ContainerProps={ContainerProps}
+      dense={dense}
+      disableGutters={disableGutters}
+      divider={divider}
+      focusVisibleClassName={focusVisibleClassName}
+    >
+      {children}
+    </NatListItem>
+  );
+};

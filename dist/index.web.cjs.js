@@ -15,8 +15,10 @@ var styled__default = /*#__PURE__*/_interopDefaultLegacy(styled);
 const AppBar = React__default['default'].forwardRef(({ children, position, color, classes, ...rest }, ref) => (React__default['default'].createElement(natdsWeb.AppBar, { position: position, color: color, classes: classes, ref: ref, ...rest }, children)));
 AppBar.displayName = "AppBar";
 
-const AppBarHighlight = React__default['default'].forwardRef(({ children, className, component, ...rest }) => (React__default['default'].createElement(natdsWeb.AppBarHighlight, { className: className, component: component, ...rest }, children)));
-AppBarHighlight.displayName = "AppBarHighlight";
+const AppBarHighlight = (props) => {
+    const { children, className, component, ...rest } = props;
+    return (React__default['default'].createElement(natdsWeb.AppBarHighlight, { className: className, component: component, ...rest }, children));
+};
 
 const Avatar = React__default['default'].forwardRef(({ testID, size, variant, alt, imgProps, color, children, src, srcSet, sizes, ...rest }, ref) => (React__default['default'].createElement(natdsWeb.Avatar, { color: color, "data-testid": testID, size: size, variant: variant, alt: alt, imgProps: imgProps, src: src, srcSet: srcSet, sizes: sizes, ref: ref, ...rest }, children)));
 Avatar.displayName = "Avatar";
@@ -39,11 +41,14 @@ Chip.displayName = "Chip";
 const Container = React__default['default'].forwardRef(({ children, className, component, fixed, disableGutters, maxWidth, ...rest }, ref) => (React__default['default'].createElement(natdsWeb.Container, { className: className, component: component, fixed: fixed, disableGutters: disableGutters, maxWidth: maxWidth, ref: ref, ...rest }, children)));
 Container.displayName = "Container";
 
-const Counter = React__default['default'].forwardRef(({ onChange, onDecrement, onIncrement, value, label, readOnly, size, maxValue, minValue, ...rest }) => (React__default['default'].createElement(natdsWeb.Counter, { value: value, label: label, readOnly: readOnly, size: size, maxValue: maxValue, minValue: minValue, onChange: onChange, onDecrement: onDecrement, onIncrement: onIncrement, ...rest })));
-Counter.displayName = "Counter";
+const Counter = (props) => {
+    const { onChange, onDecrement, onIncrement, value, label, readOnly, size, maxValue, minValue, ...rest } = props;
+    return (React__default['default'].createElement(natdsWeb.Counter, { value: value, label: label, readOnly: readOnly, size: size, maxValue: maxValue, minValue: minValue, onChange: onChange, onDecrement: onDecrement, onIncrement: onIncrement, ...rest }));
+};
 
-const CssBaseline = React__default['default'].forwardRef((props) => React__default['default'].createElement(natdsWeb.CssBaseline, { ...props }));
-CssBaseline.displayName = "CssBaseline";
+const CssBaseline = (props) => {
+    return React__default['default'].createElement(natdsWeb.CssBaseline, { ...props });
+};
 
 const CloseButton = styled__default['default'](natdsWeb.Button) ``;
 
@@ -80,7 +85,7 @@ const LinkButton = styled__default['default'].div `
   margin-top: 50px;
 `;
 
-const ErrorWrapper = React__default['default'].forwardRef((props) => {
+const ErrorWrapper = (props) => {
     const { icon, title, description, textButton, actionButton } = props;
     return (React__default['default'].createElement(ContainerWrapper, null,
         icon && (React__default['default'].createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "106", height: "106", version: "1.1" },
@@ -91,8 +96,7 @@ const ErrorWrapper = React__default['default'].forwardRef((props) => {
         textButton && (React__default['default'].createElement(LinkButton, null,
             React__default['default'].createElement(natdsWeb.Button, { color: "primary", variant: "text", onClick: actionButton, size: "large" },
                 React__default['default'].createElement("strong", null, textButton))))));
-});
-ErrorWrapper.displayName = "ErrorWrapper";
+};
 
 const ExpansionPanel = React__default['default'].forwardRef((props, ref) => {
     const { children, classes, onChange, TransitionComponent, TransitionProps, disabled, expanded, defaultExpanded, ...rest } = props;
@@ -142,11 +146,10 @@ const List = React__default['default'].forwardRef((props, ref) => {
 });
 List.displayName = 'List';
 
-const ListItem = React__default['default'].forwardRef((props) => {
-    const { children } = props;
-    return (React__default['default'].createElement(natdsWeb.ListItem, null, children));
-});
-ListItem.displayName = 'ListItem';
+const ListItem = (props) => {
+    const { testID, disabled, onClick, selected, alignItems, autoFocus, ContainerComponent, ContainerProps, dense, disableGutters, divider, focusVisibleClassName, children, } = props;
+    return (React__default['default'].createElement(natdsWeb.ListItem, { "data-testid": testID, disabled: disabled, onClick: onClick, selected: selected, alignItems: alignItems, autoFocus: autoFocus, ContainerComponent: ContainerComponent, ContainerProps: ContainerProps, dense: dense, disableGutters: disableGutters, divider: divider, focusVisibleClassName: focusVisibleClassName }, children));
+};
 
 const ListItemAvatar = React__default['default'].forwardRef((props, ref) => {
     const { children } = props;
@@ -172,17 +175,15 @@ const ListItemText = React__default['default'].forwardRef((props, ref) => {
 });
 ListItemText.displayName = "ListItemText";
 
-const ListSubheader = React__default['default'].forwardRef((props) => {
+const ListSubheader = (props) => {
     const { children, ...rest } = props;
-    return (React__default['default'].createElement(natdsWeb.ListSubheader, { ...rest }, children));
-});
-ListSubheader.displayName = 'ListSubheader';
+    return React__default['default'].createElement(natdsWeb.ListSubheader, { ...rest }, children);
+};
 
-const Logo = React__default['default'].forwardRef((props) => {
+const Logo = (props) => {
     const { color, model, size, arialabel, ...rest } = props;
     return (React__default['default'].createElement(natdsWeb.Logo, { color: color, model: model, size: size, arialabel: arialabel, ...rest }));
-});
-Logo.displayName = "Logo";
+};
 
 const Popover = React__default['default'].forwardRef((props, ref) => {
     const { children, placement, id, maxWidth, open, component, container, direction, anchorEl, disablePortal, keepMounted, popperOptions, popperRef, transition, actionLink, ...rest } = props;
@@ -190,17 +191,15 @@ const Popover = React__default['default'].forwardRef((props, ref) => {
 });
 Popover.displayName = "Popover";
 
-const ProgressIndicator = React__default['default'].forwardRef((props) => {
+const ProgressIndicator = (props) => {
     const { size = 32, ...rest } = props;
     return React__default['default'].createElement(natdsWeb.ProgressIndicator, { size: size, ...rest });
-});
-ProgressIndicator.displayName = "ProgressIndicator";
+};
 
-const Provider = React__default['default'].forwardRef((props) => {
+const Provider = (props) => {
     const { children, theme, cssPrefix, ...rest } = props;
     return (React__default['default'].createElement(natdsWeb.Provider, { theme: theme, cssPrefix: cssPrefix, ...rest }, children));
-});
-Provider.displayName = "Provider";
+};
 
 const Radio = React__default['default'].forwardRef((props, ref) => {
     const { ...rest } = props;
@@ -208,11 +207,10 @@ const Radio = React__default['default'].forwardRef((props, ref) => {
 });
 Radio.displayName = "Radio";
 
-const Rating = React__default['default'].forwardRef((props) => {
+const Rating = (props) => {
     const { id, size, rate, ...rest } = props;
     return React__default['default'].createElement(natdsWeb.Rating, { id: id, size: size, rate: rate, ...rest });
-});
-Rating.displayName = "Rating";
+};
 
 const Skeleton = React__default['default'].forwardRef(({ variant, height, width, animation, ...rest }, ref) => (React__default['default'].createElement(natdsWeb.Skeleton, { variant: variant, height: height, width: width, animation: animation, ref: ref, ...rest })));
 Skeleton.displayName = "Skeleton";
@@ -226,11 +224,10 @@ SnackbarContent.displayName = "SnackbarContent";
 const Snackbar = React__default['default'].forwardRef(({ children, anchorOrigin, autoHideDuration, classes, key, onClose, open, TransitionComponent, action, ...rest }, ref) => (React__default['default'].createElement(natdsWeb.Snackbar, { anchorOrigin: anchorOrigin, autoHideDuration: autoHideDuration, classes: classes, key: key, onClose: onClose, open: open, TransitionComponent: TransitionComponent, action: action, ref: ref, ...rest }, children)));
 Snackbar.displayName = "Snackbar";
 
-const Spacing = React__default['default'].forwardRef((props) => {
+const Spacing = (props) => {
     const { children, className, display, style, testID, ...rest } = props;
     return (React__default['default'].createElement(natdsWeb.Spacing, { className: className, display: display, style: style, "data-testid": testID, ...rest }, children));
-});
-Spacing.displayName = "Spacing";
+};
 
 const TabContainer = React__default['default'].forwardRef((props, ref) => {
     const { children, value = false, variant, ...rest } = props;

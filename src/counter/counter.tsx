@@ -3,8 +3,8 @@ import { Counter as NatCounter } from "@naturacosmeticos/natds-web";
 
 import { ICounterProps } from "./types";
 
-export const Counter = React.forwardRef<HTMLDivElement, ICounterProps>(
-  ({
+export const Counter = (props: ICounterProps): React.ReactElement => {
+  const {
     onChange,
     onDecrement,
     onIncrement,
@@ -15,7 +15,9 @@ export const Counter = React.forwardRef<HTMLDivElement, ICounterProps>(
     maxValue,
     minValue,
     ...rest
-  }: ICounterProps) => (
+  } = props;
+
+  return (
     <NatCounter
       value={value}
       label={label}
@@ -28,7 +30,5 @@ export const Counter = React.forwardRef<HTMLDivElement, ICounterProps>(
       onIncrement={onIncrement}
       {...rest}
     />
-  )
-);
-
-Counter.displayName = "Counter";
+  );
+};

@@ -1,3 +1,7 @@
 import { IListItemProps as WebListItemProps } from "@naturacosmeticos/natds-web";
 
-export type IListItemProps = WebListItemProps
+export interface IListItemProps {
+  testID?: string;
+}
+
+export interface IWebListItemProps extends WebListItemProps, IListItemProps {}
