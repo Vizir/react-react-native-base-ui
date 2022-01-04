@@ -2441,23 +2441,23 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@naturacosmeticos/natds-icons@1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@naturacosmeticos/natds-icons/-/natds-icons-1.8.0.tgz#44b76ca8320908691017f5a717a39403e28ce88d"
-  integrity sha512-kKgo5vp0pME2R3V2psWyXa3gDAO2ubbCwtg3bRB30xAeHxEfJoa7bXuo2qGxTZfb7QSbc9NYNhFEcjV3QioqcA==
+"@naturacosmeticos/natds-icons@1.9.2":
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/@naturacosmeticos/natds-icons/-/natds-icons-1.9.2.tgz#b9f2677ae7abc238f436a4b9c4545a1eb69df265"
+  integrity sha512-IDD792GQrk8goODcEcmNhjYOkh5EplHbtJxIa7F9wp0bzr5/hCcNAIEcs3WH0mKOiE0iyxj5y1/Y6up7DwvCsQ==
 
-"@naturacosmeticos/natds-icons@^1.3.0":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@naturacosmeticos/natds-icons/-/natds-icons-1.7.0.tgz#ab4b288d9c13714b0959d1edc52098ba340cc176"
-  integrity sha512-oQItxBluU9Ue2rbaMVPPKg0IMSZG5lKcFRQXK8s5rCcj3KjgbgckEAZDndBBrMsk970g41HZ864TCFrLq4XgFg==
+"@naturacosmeticos/natds-icons@^1.10.0":
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/@naturacosmeticos/natds-icons/-/natds-icons-1.10.0.tgz#49ea87d4191f700925bb4acadeb2d34c55c1f85f"
+  integrity sha512-tNN1ORXRORR5y9UnAAEHqwwrd3gqULWyG3OzxRLSeu/s6vs+WXZbO7FFw2AajBoZXEREjVP8evUJLTjWJnL4jg==
 
-"@naturacosmeticos/natds-rn@7.10.0":
-  version "7.10.0"
-  resolved "https://registry.yarnpkg.com/@naturacosmeticos/natds-rn/-/natds-rn-7.10.0.tgz#0fce18a0fe8a983fcb05f28c3c72c438941a73f2"
-  integrity sha512-RdN14MK1rHJ8gqp/MnX6SZnO/bZBLcWe51Xnc0V/I+GtYny2zHptVtY603wRrHUlPkpm6c3MG24RFj/K50OT+w==
+"@naturacosmeticos/natds-rn@7.20.0":
+  version "7.20.0"
+  resolved "https://registry.yarnpkg.com/@naturacosmeticos/natds-rn/-/natds-rn-7.20.0.tgz#01f28584f619d5b125a430f6ee673580ae403d00"
+  integrity sha512-nZVBOsgiL7yLuTVVXsauT5zelFJtfe2TzCavxrDZap2GmTFM74/kVqQFIm6JKRWozDwjf3wxDH77l2/N1ezAaw==
   dependencies:
-    "@naturacosmeticos/natds-icons" "^1.3.0"
-    "@naturacosmeticos/natds-themes" "^0.16.4"
+    "@naturacosmeticos/natds-icons" "^1.10.0"
+    "@naturacosmeticos/natds-themes" "^0.20.1"
     fs-extra "8.1.0"
     react-native-gesture-handler "^1.10.3"
     react-native-svg "^12.1.1"
@@ -2477,22 +2477,24 @@
   dependencies:
     open-color "^1.8.0"
 
-"@naturacosmeticos/natds-themes@^0.16.4":
-  version "0.16.5"
-  resolved "https://registry.yarnpkg.com/@naturacosmeticos/natds-themes/-/natds-themes-0.16.5.tgz#9a23bebc2d9f0535fc1755102170ec5a9b1e9c8d"
-  integrity sha512-Ma57M1XfWEptPZjS2gTnkrDfKFsRSvfCe9O4nXVYE/lcvoCby5EcjA8eOqW7iNuaPs8ecb+ftFZ7rPH6jVZELA==
+"@naturacosmeticos/natds-themes@^0.20.1":
+  version "0.20.1"
+  resolved "https://registry.yarnpkg.com/@naturacosmeticos/natds-themes/-/natds-themes-0.20.1.tgz#7cfce61d4c5a2cce5aeff87aae574c47c030e491"
+  integrity sha512-ZaiTHRyMnRYf8aIh4TDuJi/JKKRpJANCTXkbydInmdKVwEAbgiy6lckd1txgIVo07Hjh5TjP7fXLf2fsG7W/wQ==
   dependencies:
     open-color "^1.8.0"
+    svg2vectordrawable "^2.7.1"
+    webp-converter "^2.3.3"
 
-"@naturacosmeticos/natds-web@^4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@naturacosmeticos/natds-web/-/natds-web-4.5.2.tgz#2026b4ccc3b1ddf247136a54b21a5ea8f22d53e9"
-  integrity sha512-sV1Ils774GQ34FgwrXHdXZwK7VPSZ14Nuya/PKCfcZ41Mzy+Qh+Zq8To8k2iMfGpLRwjdWtmi9MbIDwxKd8yrQ==
+"@naturacosmeticos/natds-web@^4.5.4":
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/@naturacosmeticos/natds-web/-/natds-web-4.5.4.tgz#7c15448be68cf5b6759d5d672c1ae715d73b1f30"
+  integrity sha512-P1yTmOSMh2if1d2HJvEL3M7l3cPwysiguyzZCnG4AzqMDe8k7F7tGLwnG4bKHgMayoGNjMWEr0sK+fseUiYloA==
   dependencies:
     "@material-ui/core" "4.12.3"
     "@material-ui/icons" "4.11.2"
     "@material-ui/lab" "4.0.0-alpha.60"
-    "@naturacosmeticos/natds-icons" "1.8.0"
+    "@naturacosmeticos/natds-icons" "1.9.2"
     "@naturacosmeticos/natds-styles" "^3.4.1"
     clsx "1.1.1"
     react-text-mask "5.4.3"
@@ -3782,6 +3784,11 @@
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.1.2.tgz#ccb91445360179a04e7fe6aff78c00ffc1eeaf82"
   integrity sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==
 
+"@trysound/sax@0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
+  integrity sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==
+
 "@types/aria-query@^4.2.0":
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/@types/aria-query/-/aria-query-4.2.1.tgz#78b5433344e2f92e8b306c06a5622c50c245bf6b"
@@ -4046,6 +4053,11 @@
   version "15.7.3"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
   integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
+
+"@types/q@^1.5.1":
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.5.tgz#75a2a8e7d8ab4b230414505d92335d1dcb53a6df"
+  integrity sha512-L28j2FcJfSZOnL1WBjDYp2vUHCeIFlyYI/53EwD/rKUBQ7MtUUfbQWiyKJGpcnv4/WgrhWsFKrcPstcAt/J0tQ==
 
 "@types/qs@^6.9.5":
   version "6.9.7"
@@ -4494,6 +4506,11 @@ abort-controller@^3.0.0:
   integrity sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==
   dependencies:
     event-target-shim "^5.0.0"
+
+abs-svg-path@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/abs-svg-path/-/abs-svg-path-0.1.1.tgz#df601c8e8d2ba10d4a76d625e236a9a39c2723bf"
+  integrity sha1-32Acjo0roQ1KdtYl4japo5wnI78=
 
 absolute-path@^0.0.0:
   version "0.0.0"
@@ -5992,6 +6009,15 @@ co@^4.6.0:
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
   integrity sha1-bqa989hTrlTMuOR7+gvz+QMfsYQ=
 
+coa@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/coa/-/coa-2.0.2.tgz#43f6c21151b4ef2bf57187db0d73de229e3e7ec3"
+  integrity sha512-q5/jG+YQnSy4nRTV4F7lPepBJZ8qBNJJDBuJdoejDyLXgmL7IEo+Le2JDZudFTFt7mrCqIRaSjws4ygRCTCAXA==
+  dependencies:
+    "@types/q" "^1.5.1"
+    chalk "^2.4.1"
+    q "^1.1.2"
+
 code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
@@ -6085,6 +6111,11 @@ commander@^6.2.1:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-6.2.1.tgz#0792eb682dfbc325999bb2b84fddddba110ac73c"
   integrity sha512-U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==
+
+commander@^7.2.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
+  integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
 
 commander@~2.13.0:
   version "2.13.0"
@@ -6476,7 +6507,7 @@ css-to-react-native@^3.0.0:
     css-color-keywords "^1.0.0"
     postcss-value-parser "^4.0.2"
 
-css-tree@^1.0.0-alpha.39:
+css-tree@^1.0.0-alpha.39, css-tree@^1.1.2, css-tree@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-1.1.3.tgz#eb4870fb6fd7707327ec95c2ff2ab09b5e8db91d"
   integrity sha512-tRpdppF7TRazZrjJ6v3stzv93qxRcSsFmW6cX0Zm2NVKpxE1WV1HblnghVv9TreireHkqI/VDEsfolRF1p6y7Q==
@@ -6520,6 +6551,13 @@ cssesc@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
+
+csso@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/csso/-/csso-4.2.0.tgz#ea3a561346e8dc9f546d6febedd50187cf389529"
+  integrity sha512-wvlcdIbf6pwKEk7vHj8/Bkc0B4ylXZruLvOgs9doS5eOsOpuodOV2zJChSpkp+pRpYQLQMeF04nr3Z68Sta9jA==
+  dependencies:
+    css-tree "^1.1.2"
 
 cssom@^0.4.4:
   version "0.4.4"
@@ -9270,6 +9308,11 @@ is-string@^1.0.7:
   dependencies:
     has-tostringtag "^1.0.0"
 
+is-svg-path@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/is-svg-path/-/is-svg-path-1.0.2.tgz#77ab590c12b3d20348e5c7a13d0040c87784dda0"
+  integrity sha1-d6tZDBKz0gNI5cehPQBAyHeE3aA=
+
 is-symbol@^1.0.2, is-symbol@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/is-symbol/-/is-symbol-1.0.4.tgz#a6dac93b635b063ca6872236de88910a57af139c"
@@ -11239,6 +11282,13 @@ normalize-range@^0.1.2:
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
   integrity sha1-LRDAa9/TEuqXd2laTShDlFa3WUI=
 
+normalize-svg-path@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/normalize-svg-path/-/normalize-svg-path-1.1.0.tgz#0e614eca23c39f0cffe821d6be6cd17e569a766c"
+  integrity sha512-r9KHKG2UUeB5LoTouwDzBy2VxXlHsiM6fyLQvnJa0S5hrhzqElH/CH7TUGhT1fVvIYBIKf3OpY4YJ4CK+iaqHg==
+  dependencies:
+    svg-arc-to-cubic-bezier "^3.0.0"
+
 npm-run-path@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/npm-run-path/-/npm-run-path-2.0.2.tgz#35a9232dfa35d7067b4cb2ddf2357b1871536c5f"
@@ -11723,6 +11773,11 @@ parse-json@^5.0.0:
     error-ex "^1.3.1"
     json-parse-even-better-errors "^2.3.0"
     lines-and-columns "^1.1.6"
+
+parse-svg-path@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/parse-svg-path/-/parse-svg-path-0.1.2.tgz#7a7ec0d1eb06fa5325c7d3e009b859a09b5d49eb"
+  integrity sha1-en7A0esG+lMlx9PgCbhZoJtdSes=
 
 parse5@6.0.1, parse5@^6.0.0:
   version "6.0.1"
@@ -12215,6 +12270,11 @@ punycode@^2.1.0, punycode@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
+
+q@^1.1.2:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
+  integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
 qs@6.7.0:
   version "6.7.0"
@@ -13943,6 +14003,50 @@ supports-hyperlinks@^2.0.0:
     has-flag "^4.0.0"
     supports-color "^7.0.0"
 
+svg-arc-to-cubic-bezier@^3.0.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/svg-arc-to-cubic-bezier/-/svg-arc-to-cubic-bezier-3.2.0.tgz#390c450035ae1c4a0104d90650304c3bc814abe6"
+  integrity sha512-djbJ/vZKZO+gPoSDThGNpKDO+o+bAeA4XQKovvkNCqnIS2t+S4qnLAGQhyyrulhCFRl1WWzAp0wUDV8PpTVU3g==
+
+svg-path-bounds@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/svg-path-bounds/-/svg-path-bounds-1.0.2.tgz#00312f672b08afc432a66ddfbd06db40cec8d0d0"
+  integrity sha512-H4/uAgLWrppIC0kHsb2/dWUYSmb4GE5UqH06uqWBcg6LBjX2fu0A8+JrO2/FJPZiSsNOKZAhyFFgsLTdYUvSqQ==
+  dependencies:
+    abs-svg-path "^0.1.1"
+    is-svg-path "^1.0.1"
+    normalize-svg-path "^1.0.0"
+    parse-svg-path "^0.1.2"
+
+svg2vectordrawable@^2.7.1:
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/svg2vectordrawable/-/svg2vectordrawable-2.8.2.tgz#333a3f6be3def59a2f986ca602d3e624de8f68c5"
+  integrity sha512-jCcMJmXLdJ5XyTVrp6mQRjFFqCqSZ1t07MHDfxpnfoge5BKfzlO3AtGLA4KUc3yA7sDGKmq4ycIBDmw2su+0uQ==
+  dependencies:
+    coa "^2.0.2"
+    mkdirp "^1.0.4"
+    svg-path-bounds "^1.0.1"
+    svgo "^2.8.0"
+    svgpath "^2.3.0"
+
+svgo@^2.8.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/svgo/-/svgo-2.8.0.tgz#4ff80cce6710dc2795f0c7c74101e6764cfccd24"
+  integrity sha512-+N/Q9kV1+F+UeWYoSiULYo4xYSDQlTgb+ayMobAXPwMnLvop7oxKMo9OzIrX5x3eS4L4f2UHhc9axXwY8DpChg==
+  dependencies:
+    "@trysound/sax" "0.2.0"
+    commander "^7.2.0"
+    css-select "^4.1.3"
+    css-tree "^1.1.3"
+    csso "^4.2.0"
+    picocolors "^1.0.0"
+    stable "^0.1.8"
+
+svgpath@^2.3.0:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/svgpath/-/svgpath-2.4.1.tgz#6b535030d712281bf85d620783833655228e517e"
+  integrity sha512-uN7gIWn29P0nkuDWdavK56S8b86h1irSIlrRwkngMju/T9OdXMRvYoybXDJy9iVAnyiWxk9eWcU0TwDayD2Ueg==
+
 symbol-observable@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
@@ -14654,7 +14758,7 @@ uuid@^3.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
-uuid@^8.3.0:
+uuid@^8.3.0, uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
@@ -14800,6 +14904,13 @@ webidl-conversions@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-6.1.0.tgz#9111b4d7ea80acd40f5270d666621afa78b69514"
   integrity sha512-qBIvFLGiBpLjfwmYAaHPXsn+ho5xZnGvyGvsarywGNc8VyQJUMHJ8OBKGGrPER0okBeMDaan4mNBlgBROxuI8w==
+
+webp-converter@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/webp-converter/-/webp-converter-2.3.3.tgz#fd7a0620c71749370e2795930092703beb386575"
+  integrity sha512-2p4XvPCIQ/CbUztEFA9vdkILVrRTdMtMxFpQTxlnPc3qx14MV5wnpVvK7m6pG70QdeL+Ser0+Tp843ONwh8VbQ==
+  dependencies:
+    uuid "^8.3.2"
 
 webpack-dev-middleware@^3.7.3:
   version "3.7.3"
