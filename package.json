@@ -1,6 +1,6 @@
 {
   "name": "githubapp-base-ui",
-  "version": "1.5.0",
+  "version": "1.5.3",
   "license": "MIT",
   "private": true,
   "main": "dist/index.web.cjs.js",
@@ -69,13 +69,13 @@
     "typescript": "^4.2.4"
   },
   "dependencies": {
-    "@naturacosmeticos/natds-rn": "7.10.0",
-    "@naturacosmeticos/natds-web": "^4.5.2",
+    "@naturacosmeticos/natds-rn": "^7.22.0",
+    "@naturacosmeticos/natds-web": "^4.5.4",
     "styled-components": "^5.2.3"
   },
   "peerDependencies": {
-    "@naturacosmeticos/natds-rn": "^7.10.0",
-    "@naturacosmeticos/natds-web": "^4.5.2",
+    "@naturacosmeticos/natds-rn": "^7.22.0",
+    "@naturacosmeticos/natds-web": "^4.5.4",
     "react": "17.0.1",
     "react-native": "0.64.1"
   }
