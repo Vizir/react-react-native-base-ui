@@ -78,5 +78,8 @@
     "@naturacosmeticos/natds-web": "^4.5.4",
     "react": "17.0.1",
     "react-native": "0.64.1"
+  },
+  "resolutions": {
+    "@naturacosmeticos/natds-icons": "^1.10.2"
   }
 }
