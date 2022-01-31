@@ -2451,7 +2451,7 @@
   resolved "https://registry.yarnpkg.com/@naturacosmeticos/natds-icons/-/natds-icons-1.10.2.tgz#81bfd187996c65694a0dfa3b6e708c508005f4c0"
   integrity sha512-v2LmlV4+OZge0jM1GBChxpLWakEY8HPvcSwWHsB/FArEEL51ki9uYX0wlrfop+Tjy5AVVagj5aGX+6+o5Zg/0w==
 
-"@naturacosmeticos/natds-rn@^7.22.0":
+"@naturacosmeticos/natds-rn@^7.10.0":
   version "7.22.0"
   resolved "https://registry.yarnpkg.com/@naturacosmeticos/natds-rn/-/natds-rn-7.22.0.tgz#4cbee1d3107fa9b6cee7ace8b055a4d9ef0de877"
   integrity sha512-k+aDN7NTGI7uhSdBGOsllx29DeBNNTV0AiOXGuEZ9Tdm5LnAnCjsNrgwSTkG670YNAiyv6OzlgEMf/z/v15/UA==
